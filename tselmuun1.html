@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💌 1000 Reasons Why I’d Wait For You</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(-45deg, #ffe6f0, #ffd6eb, #ffcce0, #ffeaf6);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+      overflow: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 44px;
+      text-shadow: 2px 2px 6px rgba(255, 51, 102, 0.5);
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 10px 0 30px;
+      animation: fadeIn 2.5s ease;
+    }
+
+    #reasonCard {
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 650px;
+      font-size: 24px;
+      color: #b30059;
+      font-weight: bold;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      min-height: 120px;
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    #reasonCard.show {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+
+    #counter {
+      margin-top: 12px;
+      font-size: 18px;
+      color: #666;
+      font-style: italic;
+    }
+
+    #progress {
+      height: 6px;
+      width: 0;
+      max-width: 650px;
+      margin: 15px auto 0;
+      border-radius: 4px;
+      background: linear-gradient(90deg, #ff66b3, #ff99cc);
+      transition: width 2.5s linear;
+    }
+
+    button, input {
+      margin-top: 15px;
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff99cc, #ff66b3);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ff66b3, #ff3385);
+      transform: scale(1.08);
+    }
+
+    input {
+      background: white;
+      color: #333;
+      border: 2px solid #ff99cc;
+      border-radius: 12px;
+      width: 90px;
+      text-align: center;
+      margin-right: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      font-size: 20px;
+      animation: floatUp 6s linear forwards;
+      opacity: 0.8;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-100vh) scale(1.3); opacity: 0; }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 1000 Reasons Why I’d Wait For You 💌</h1>
+  <p>Because you’re worth every second. 💖</p>
+
+  <div id="reasonCard">Click below to see the first reason...</div>
+  <div id="counter"></div>
+  <div id="progress"></div>
+
+  <div>
+    <button onclick="nextReason()">Show Next 💕</button>
+    <input type="number" id="reasonNumber" placeholder="#" min="1">
+    <button onclick="goToReason()">Go! ✨</button>
+    <button onclick="toggleSlideshow()" id="slideshowBtn">▶️ Slideshow</button>
+    <button><a href="tselmuun.html">🏠 Home</a></button>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="your-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const reasons = [
+      "Because your smile makes my day brighter 🌞",
+      "Because I love the way you make me laugh 😂",
+      "Because I want to hold your hand forever 🤝",
+      "Because you are my safe place 💕",
+      "Because life feels better with you in it 🌍",
+      "I Love waiting for you so muchh",
+      "I'm such a gentleman",
+      "It's my choice to wait for you",
+      "I want to be there for you in case you need someone",
+      "You might need me", 
+      "Why can't I wait for you",
+      "My Love language is patience",
+      "Our love is worth the wait",
+      "I WANNA WAIT FOR YOUU",
+      "If I don't wait for you I feel bad",
+      "To annoy hehe",
+      "Think about my day while waiting",
+      "I Love supporting you in small ways",
+      "I'm gonna wait for you in the future soo",
+      "I'm waiting for the person I TRULY LOVE",
+      "I got used to waiting for you",
+      "I'm writing a 1000 reasons to wait for you while waiting for you",
+      "I LOVE YOUU (Always)",
+      "I LOVE YOUR EYES",
+      "I LOVE YOUR HAIRR",
+      " I LOVE YOUR LEFT EYES MENG",
+      "I LOVE YOUR CHEEKSS",
+      "I LOVE YOUR SMILEE",
+      "I LOVE MAKING YOU SMILEE",
+      "I LOVE YOUR VOICE",
+      "I LOVE YOUR EARS",
+      "I LOVE YOUR NOSE",
+      "I LOVE YOUR PRETTY FACE",
+      "I LOVE YOUR STRAIGHT HAIR",
+      "I LOVE YOUR LIPSS", 
+      "I LOVE YOUR PERSONALIYY",
+      "I LOVE HOW YOU MAKE ME HAPPY",
+      "I LOVE YOU HAVE BOUNDARIES",
+      "I LOVE WHEN YOU SAY NARR",
+      "I LOVE YOUR HONESTY",
+      "I LOVE THAT YOU TELL ME EVERYTHING",
+      "I LOVE TALKING TO YOUU",
+      "I want you to feel safe around me",
+      "I don't want you to think I'm better off without you",
+      "I want you to feel relived that someone waits for you",
+      "I would wait for you in any circumstances",
+      "I LOVE THINKING ABOUT UUU",
+      "Everything I see reminds me of you",
+      "Because I'm gonna do this for the rest of my life",
+      "Actions speak louder than words",
+      "I CARE ABOUT UUU",
+      "I respect you",
+      "I want to make u feel loved",
+      "I'm a green forestt",
+      "I'M YOUR DUMMYYY",
+      "You're my sleepy headd",
+      "Because  I'm gonna marry you",
+      "Because you will be the mother of my children",
+      "Because you are the love of my life",
+      "Because I wanna experience everything this world has to offer with you",
+      "Because I want to show you I can do anything to you",
+      "Because everything I AM belongs to you",
+      "Because to show you I have no one but you",
+      "Because we're gonna become old couples",
+      "Because to show you that no one loves you more than me",
+      "Because we're gonna watch harry potter movies",
+      "Because I want to show you how much you mean to me",
+      "Because I'm gonna give you all my time",
+      "Becasue i want you to feel special",
+      "Because I'm different from others",
+      "Because I WANNNA TREAT YOU LIKE A QUEEN",
+      "Because she is my Ae-sun",
+      "Because you're the reason I wanna be successful",
+      "Because I WANNA SHOW YOU THE ENTIRE WORLD",
+      "BECAUSE WE'RE GONNA LIVE TOGETHERR",
+      "BECAUSE WE'RE GONNA DO MOVIE NIGHTSS",
+      "BECAUSE MY FAMILY LOVES YOU",
+      "BECAUSE I HUG YOU ",
+      "BECAUSE I HOLD YOUR HANDS",
+      "BECAUSE I KISS YOUU",
+      "BECAUSE I'M GONNA BE AT YOUR EVERY BIRTHDAY",
+      "BECAUSE WE'RE GONNA WATCH OUR CHILDRENS TALENT SHOWS",
+      "BECAUSE I WOULD COOK TO YOU",
+      "BECAUSE YOU WOULD BAKE FOR MEE",
+      "BECAUSE I WOULD DO ALL THE DISHES",
+      "BECAUSE I WOULD BUY YOU ALL THE BOOKS YOU WANT",
+      "BECAUSE I CAN TREAT YOU LIKE A CHILD",
+      "BECAUSE I LOVE YOU MORE",
+      "BECAUSE WE WOULD BUY OUR HOUSE TOGETHER",
+      "BECAUSE I WANT TO SHOW YOUR FAMILY HOW MUCH I LOVE YOU",
+      "BECAUSE I WOULD ASK HER PERMISSION TO PLAY CS2",
+      "BECAUSE YOUR OPINNION MATTERS MORE TO ME",
+      "BECAUSE YUOU WOULD BE MY PERSONAL DOCTOR",
+      "BECAUSE I WOULD ERHLUULEH YOU",
+      "BECAUSE I WON IN LIFE FINDING YOU",
+      "BECAUSE I WOULD BUY YOU ALL THE CANDIES YOU WANT",
+      "BECAUSE YOU WOULD EAT MY ICE CREAM",
+      "BECAUSE I WANT BOTH OUR PARENTS TO BE PROUD OF US",
+      "BECAUSE I'M YOUR HUSBAND",
+      "BECAUSE YOU'RE MY WIFE",
+      "BECAUSE WE'RE GONNA BE GRANDPARENTS",
+      "BECAUSE I'M GONNA GIVE YOU LILIES",
+      "BECAUSE I MISS YOU",
+      "BECAUSE I'LL WATCH YOUR MOVIE RECOMMENDATIONS",
+      "BECAUSE I'M THE FIRST MAN TO GIVE YOU LILIES",
+      "BECAUSE I WANT YOU TO SAY MY LIFE GOT BETTER AFTER MEETING ME",
+      "BECAUSE I WANT TO SHOW YOU NO ONE IS GOOD ENOUGH FOR HER",
+      "BECAUSE WE'RE GONNA EAT A LOT OF KFC",
+      "BECAUSE I WANNA PLAY WITH YOUR HAIR ",
+      "BECAUSE I CHOSE YOU",
+      "BECAUSE I WOULD NEVER FALL IN LOVE WITH ANOTHER",
+      "BECAUSE EVERY SONGS REMINDS ME OF YOUU",
+      "BECAUSE I FOUND LOVE IN YOU",
+      "I LOVE YOUR CURLY HAIR",
+      "I LOVE YOUR FAMILYY",
+      "SLEEPY HEAD",
+      "BECAUSE OUR FUTURE CHILDREN WOULD LOVE YOU MORE THAN ME",
+      "BECAUSE I'M THE FUN PARENT",
+      "BECAUSE I'M GONNA WATCH THE SEUNSETS WITH YOU",
+      "BECAUSE I LEARNED MATCHA FOR U",
+      "WHEN I'M WITH YOU MY EGO DISSAPEARS",
+      "BECAUSE I DREAM ABOUT U",
+      "BECAUSE I WOULD GO ON ROLLER COASTERS WITH U",
+      "BECAUSE WE WOULD GO TO DISNEY LAND",
+      "BECAUSE SHE MAKES ME DO BETTER",
+      "BECAUSE I DIDN'T HAVE TO ACT LIKE SOMEONE ELSE AROUND HER",
+      "BECAUSE I NEVER FELT LIKE A FAILURE WHEN I'M WITH YOU",
+      "BECAUSE I WANT TO PROTECT HER FROM EVERYTHING",
+      "BECAUSE HONESTLY YOU DESERVE SOMEONE BETTER THAN ME",
+      "BECAUSE I ONLY WANT TO BE WITH YOU",
+      "BECAUSE YOU GIVE ME GREAT MOVIE SUGGESTIONS ",
+      "BECAUSE I ACTUALLY FEEL LOVED", 
+      "BECAUSE YOU WOULD EAT ALL MY DESSERTS",
+      "BECAUSE I'M THE BEST",
+      "BECAUSE I WANT OUR KIDS TO BE DISGUSTED WHEN THEY SEE US BEING LOVEY DOVEY",
+      "BECAUSE WE'RE GONNA TRAVEL TOGETHER",
+      "BECAUSE WE HAVE MATCHING KEY CHAINS",
+      "BECAUSE WE'RE GONNA WATCH SCARY MOVIES",
+      "BECAUSE I LOVE YOUR LIP KISSES",
+      "BECAUSE I'M MAKING A WEBSITE FOR YOU"
+    ];
+
+    let index = 0;
+    let slideshow = null;
+    const card = document.getElementById("reasonCard");
+    const counter = document.getElementById("counter");
+    const progress = document.getElementById("progress");
+    const music = document.getElementById("bg-music");
+    const slideshowBtn = document.getElementById("slideshowBtn");
+
+    function showReason(num) {
+      if (num >= 1 && num <= reasons.length) {
+        card.classList.remove("show");
+        setTimeout(() => {
+          card.textContent = num + ". " + reasons[num - 1];
+          card.classList.add("show");
+        }, 250);
+        counter.textContent = `Reason ${num} of ${reasons.length}`;
+        index = num;
+      } else {
+        card.textContent = "That reason doesn’t exist yet, my love 💕";
+        counter.textContent = "";
+      }
+    }
+
+    function nextReason() {
+      if (index < reasons.length) {
+        showReason(index + 1);
+        progress.style.width = "100%";
+        setTimeout(() => { progress.style.width = "0%"; }, 50);
+      } else {
+        card.textContent = "And there are so many more reasons... because I’ll always wait for you ❤️";
+        counter.textContent = "";
+        stopSlideshow();
+      }
+    }
+
+    function goToReason() {
+      const num = parseInt(document.getElementById("reasonNumber").value);
+      if (!isNaN(num)) showReason(num);
+    }
+
+    function toggleSlideshow() {
+      if (slideshow) {
+        stopSlideshow();
+      } else {
+        slideshow = setInterval(nextReason, 3000);
+        slideshowBtn.textContent = "⏸️ Stop";
+        music.volume = 0.5;
+        music.play().catch(()=>{});
+      }
+    }
+
+    function stopSlideshow() {
+      clearInterval(slideshow);
+      slideshow = null;
+      slideshowBtn.textContent = "▶️ Slideshow";
+      music.pause();
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = ["💖","❤️","💕","💓","💗"][Math.floor(Math.random()*5)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (16 + Math.random() * 28) + "px";
+      heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(createHeart, 600);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") nextReason();
+      if (e.key === "Enter") goToReason();
+    });
+
+    window.onload = () => {
+      document.getElementById("reasonNumber").focus();
+    };
+  </script>
+</body>
+</html>

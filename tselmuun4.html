@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌙 Things We’d Do</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      color: #333;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 38px;
+      text-shadow: 2px 2px 8px rgba(255, 51, 102, 0.3);
+      margin-bottom: 25px;
+    }
+
+    .things-list {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-align: left;
+    }
+
+    .thing {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+      padding: 12px 18px;
+      border-radius: 12px;
+      background: #ffe6f2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .thing:hover {
+      background: #ffb3d9;
+      transform: scale(1.05);
+      color: white;
+    }
+
+    .delete-btn {
+      background: #ff3366;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .delete-btn:hover {
+      background: #ff0000;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff99cc, #ff66b3);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ff66b3, #ff3385);
+      transform: scale(1.1);
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      color: #ff6699;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0.7; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🌙 Things We’d Do 💕</h1>
+
+  <div class="things-list" id="thingsList"></div>
+
+  <button onclick="addThing()">Add a New Thing ✨</button>
+  <button onclick="window.location.href='tselmuun.html'">🏠 Home</button>
+
+  <script>
+    const thingsList = document.getElementById("thingsList");
+
+    // Load saved things or use defaults
+    let things = JSON.parse(localStorage.getItem("things")) || [
+      "Go stargazing together 🌌",
+      "Have a movie marathon 🎬",
+      "Bake cookies 🍪",
+      "Take a long walk on the beach 🏖️",
+      "Travel to a new city 🌍"
+    ];
+
+    function showThings() {
+      thingsList.innerHTML = "";
+      things.forEach((thing, index) => {
+        const div = document.createElement("div");
+        div.className = "thing";
+
+        const text = document.createElement("span");
+        text.textContent = `${index + 1}. ${thing}`;
+
+        const delBtn = document.createElement("button");
+        delBtn.textContent = "Delete ❌";
+        delBtn.className = "delete-btn";
+        delBtn.onclick = () => {
+          things.splice(index, 1);
+          showThings();
+        };
+
+        div.appendChild(text);
+        div.appendChild(delBtn);
+        thingsList.appendChild(div);
+      });
+
+      // Save to localStorage
+      localStorage.setItem("things", JSON.stringify(things));
+    }
+
+    function addThing() {
+      const newThing = prompt("What’s a thing we’d do together? 💖");
+      if (newThing && newThing.trim() !== "") {
+        things.push(newThing);
+        showThings();
+      }
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random() * 25) + "px";
+      heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 700);
+    showThings();
+  </script>
+</body>
+</html>
+

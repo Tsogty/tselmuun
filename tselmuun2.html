@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📸 Our Photographs</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      color: #333;
+      padding: 30px;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #ff3366;
+      font-size: 38px;
+      text-shadow: 2px 2px 8px rgba(255, 51, 102, 0.3);
+      margin-bottom: 20px;
+    }
+
+    .slideshow {
+      position: relative;
+      margin: auto;
+      width: 100%;
+      max-width: 700px;
+      height: 750px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      background: white;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .active {
+      display: block;
+      animation: fade 1s;
+    }
+
+    @keyframes fade {
+      from { opacity: 0.4; }
+      to { opacity: 1; }
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff99cc, #ff66b3);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #ff66b3, #ff3385);
+      transform: scale(1.08);
+    }
+
+    .heart {
+      position: absolute;
+      bottom: -50px;
+      color: #ff6699;
+      font-size: 20px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0.7; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>📸 Our Precious Memories 💖</h1>
+
+  <div class="slideshow">
+    <div class="slide active"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552641615_1505704747412903_1661545234535525015_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=vcDlN5-8rakQ7kNvwFa8PqP&_nc_oc=AdmgXakQVmE_yqm5dva55lMhZOCDv9Czea3UCe1B-9rfmVfZDc6Zo847dqhaOYbSvbg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QED_Ov_kRRRvkO1u5DEv4AlBqBmW6E5beCYSY6ThfJqMQ&oe=68FCE443" alt="Memory 1"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552585435_1841640216788850_3965982205370596091_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=3W2qp9v4__UQ7kNvwGV6QIH&_nc_oc=AdniDmCl8JbVbF09i2VhD_FE6UJ5PGBxKCsihdJX8nfdeQckxidk_8pSFN9jNpstBJo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHl0ds4n9aYcsGNkx-Wyo-xGoeXvypdPwmvuolmaOuAnQ&oe=68FCD7F0" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552640626_1330097295223010_3293159605404928263_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8krvJw0Me34Q7kNvwFAxX2w&_nc_oc=AdltegtP01vWzxlfBCW9hyriTQprOIoXCev0-LpxxVLz8wPyFW1KPSVd6CaLxhx_cYc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QELO4y0wn76L4-zpWKjRUcZOByEZYM-EaPMwtjnF9LRjQ&oe=68FCBD09" alt="Memory 2"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551521748_1826905948179562_2268552037076513664_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=J45hfE4sSacQ7kNvwHrr4PS&_nc_oc=AdmE__V0bGrMBA2pmOCgSH3mPVPAuxGZSbMp4fYwuB6v8IcJ51-Nquba-fWArtWi60A&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF1X4KDkrh8KEgzwWpu9tVazZy7nW2HZuJqTmIxa7O7uQ&oe=68FCE4D4" alt="Memory 3"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552024958_776983651719726_6742335866272362821_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mvXRWXdVt7IQ7kNvwGWSXM5&_nc_oc=AdnBhVH-AwF37Bihepc3ewJS7oVdIE82PeiqON--xsnOZsyMfP3kulPqkbTQ9xN6E6w&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF7ln1BqKL0phlXbjRTlIKlGltT3OZkwuE9rVdjhBT56w&oe=68FCC89E" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552043056_1531397501647166_4396807686803253910_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Z3fX-D3FlwwQ7kNvwGspjkY&_nc_oc=AdkuWcA3Zc0M4O5D5rCwvOmfbUMp3GnEah6Ud5dMEgR61LKX4Rd8JePQBbajB7noD1g&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHz746ztKVM3qc9hf0TNt00DqZZcnh9GQ6FL1iEP9pATQ&oe=68FCEAF9" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552447138_1994341144736149_5194530607319951358_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=guO5QKqrYaUQ7kNvwFNAXan&_nc_oc=AdkDlWXFAkpSmvXINStReJuhliWleG18jkJLMOUK5E9dSEzOHn6jxfZRBD87ns6bn8Q&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHWAI3kOBE13_QJ3JxSsxWZWNiutzZJp1K47KQY7fHkKA&oe=68FCE6B7" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552427642_800483342470834_768807288175821528_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pB8oidRbH9kQ7kNvwHHMg6N&_nc_oc=AdmudLzLR9s5jeW5UapSpTaCmA_JW4z4ZM91dVjnNJas4SzQxmRNAiPpcOosvapWmAQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGPj-HLHB86s3VSOjd3xa9sCcf5mN4SfCwxAlP4ZSKDhg&oe=68FCD7E6" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552671218_1854336702129642_6447236696827254315_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=n6R9AvKIjQ4Q7kNvwGmjNHM&_nc_oc=AdnC8YjAKv8toyHouKT2VkYzva_g321F5ls58Zj7lZ8LVS3Mymo7Nw-jSvHnEqtfVgc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QE8wcDsTaYqHmRUSCjqWqdteLtdInV-GpHmy7_N8rTKBw&oe=68FCD97C" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552881957_791087746899121_2678338614030692642_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=jHQ4kUX2IUsQ7kNvwG17m8M&_nc_oc=AdnSy3zX6uglZxBskmXE0G5yn3Fv6pZGbaPp7Oqsoawk7KMyhhcksyOKO_HTwKgz52k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGzgNFc1UYZdTCQyn9G_hdQrNBUKlBA5mOqRuL8MlmDQw&oe=68FCEB3B" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551796189_1419906702444659_1013564178778342755_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Kj1YAqH3FAwQ7kNvwGbyCn0&_nc_oc=AdkZcym11nsTqpcS8CHuQZGfI3KjLp5B_JhBTokCWFUxknKVkTfdzPzbq6yt6rGdDbQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QE8diyPi8J5mVeBovMOjNl5duwH724B_LdFb7OQBYM2NA&oe=68FCDFAC" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554813577_1140682131341244_5066470763509352986_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rcALgqifStsQ7kNvwG1ZQs9&_nc_oc=AdmUyOzwyE3h6R3Pr9bmXd7eVa7aU6qFvocXDy7gEXipZik__3YdB9CaT0y0_rqRrfA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QEefSFjm0QXFgloQbG4F0jAKFqVk_8gXi1IVjBzHuF_mA&oe=68FCE2AC" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552533887_1989393958297354_9103929415140615619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VSgIxVpKrL4Q7kNvwEgt9sn&_nc_oc=AdnB_q0GQpEzOJe_d5SKcFgXWH2YlmjzfxcV6S73xcZENs4QdWWkoXz1z223PKgFDA4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHtX2fxLCOpsGoQ0Xa8RXkQ4tVJcba99xyY_mIsxLewzA&oe=68FCC61E" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552676928_1115372940710858_5586007837843428002_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=g3bYNCPn2CYQ7kNvwH2GKgp&_nc_oc=AdkYNSlEPSGo8Z4hshbwjtdEiIoqgn80YjAaR-2x14vgliNkcBItkYXeBAhTMX2_kCI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGVGqP_QAq23X-afIIff5wI4rO3HEimrvC24dQogzTXLg&oe=68FCD01D" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552916574_2780952552107987_5060286844175490713_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0e1T20FyXsgQ7kNvwFJpKhO&_nc_oc=AdlLD_c0tAO0WlUTOI7JKM6VffjDok_zqbykmzqYa40dnrpD-hAT6GJhoFhLgCNz00w&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGr3eaKvUgmv4oWI0G297B-hlxNkAHbveHSI3DvyW13vA&oe=68FCD8D7" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552714151_1156515726382753_7104402338677610659_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=LLOqzOTuFyYQ7kNvwHpp30m&_nc_oc=Adk_LEdXARj3Y7mVjISRdXh9zWjRfTXudgSwB3rpduneYJDzPYMJjF8cfIOQatV93CI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFXKfwTlM4Zsuz1Nt7wtV4DbYJhPC8MMoWovZfEQVF6Ag&oe=68FCF46C" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552164553_1736607607004970_1100248294196324489_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=laj7mmRqtOUQ7kNvwEkO6qm&_nc_oc=AdnE4VAfxwZj2gTr7UCLZIvSwSZtR__PGnM1jyWtig4hvShrNaQ5IoOz0RSaiTyxB4E&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFvQwMWc9FSHUOexMfAUWov4KTOtoCyEDUvSwrxUaSUqA&oe=68FCD4D5" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551757772_25038857759084980_9001218403825351820_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=NjcFSBVkmo4Q7kNvwE73tyQ&_nc_oc=Adk3LkgS1bb9z5R5Jka6k2KELbNw9PaGVNDc5TRaYOpOfaD7kDT13TdtO7nsZpq18i0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHeJw7crrxo_pNx34aBhBdz6KH8G8RcGEAnpnhPJM59bg&oe=68FCE180" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551890419_1250710700430884_4594843390372396240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7WNyRCR7g_MQ7kNvwGZyf2I&_nc_oc=Adm8HyHeILHf3WTIiRbTCdT3MOYLbxqdbWkrJnhisGvATTE3TrKOhdhP3V63PWfLdCk&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGTa0BcGr6dOswBFhKhzvInyygt8qBUGYrTFrUrLSy3cw&oe=68FCCC4A" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552589951_25238206285763350_1789066670447357636_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KludddY6hhcQ7kNvwEUnv8D&_nc_oc=AdlvXJdcBxW4M0hag-EznnD-nP5u2Hofbw-p3xzyCt7x42E1YRaew3N2KldizwZmBto&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF_J0S4a0ViyWfa6X9Y434WhxMJhSDy_lU4p2pHleyCNA&oe=68FCCA25" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552646816_1146001840737227_2424688650273987125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cHTbL_NA-4cQ7kNvwGzyyiF&_nc_oc=Adn1awP22VHeo9LQOYISEfswGvxgQyA0sXxIhkXEil6tqf1EuGZ0Ysz7Z-OT8bj15Uw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QEn2Jl3A_lIgtbhWFSUkKwCSJrE0_KWk8uNIW_gP7XLLA&oe=68FCBD36" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551868553_1565816911065348_3111001640974475706_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mkXCSftav4gQ7kNvwHWSDII&_nc_oc=AdnJOosn8dfYTdNgL5ZVpbmZyFJIpvaqMHrXYV_wI9x7lI46RyLX8RoQBRPpAIjU1P8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHSv6udJyVeUhjuq7CRze5yrqlQMuEo1ci_u-xVKT754A&oe=68FCCCC9" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552692236_24674442642165001_183796185755762850_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=F1rsIQ4ZI9MQ7kNvwHLZSE8&_nc_oc=AdmdUAsG3DIPtZbc20Q9Or7cBG_8vS31plA1IL4LHv66BVHwUDDQ2ETBHo1padUDIOc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QG9uY2b4MrLUp_-9VQ9H6-IPxiPfUGHc9-Sn65GPrQhEA&oe=68FCBDF1" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552365244_24592685807062272_5716030234628956139_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PkHgp6ztKMoQ7kNvwGxeoJ5&_nc_oc=AdmiJUF0_yG_MnP_JnzE59pSnW-gy_LyEx4Aa2a_h0yH64GkNIDAIsZIVNSWHmEZr1c&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGI2JScZEssiRoQ4-X5nRIxn37cP39ZNFw_FAkUWgrsWg&oe=68FCEA43" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552889306_801196645644649_4207363879347710441_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=vYTRQXHLAmQQ7kNvwFGYpS3&_nc_oc=AdlN8NSAoEXKRp7EkvKSUNb0o5YQF77uR3vo9QDhBALueGu-MteQIlvwFPm_Zignkoo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHancdNDkbpW88s8rfcbIa_oIat5xiWWk_0k7pG1gn9DQ&oe=68FCFF1E" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552544167_1127083226055092_4318015423771392047_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=TzDgx0A-m_EQ7kNvwFO7V4e&_nc_oc=AdkStC_2A-W0rV2sxAdiNyKjh-d9o0tpxUiuuvCYgb6k_yGBcIYlNrwk1kyiSc99fwM&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHObKQg5VyrsuuXF0YhTujMdMnkrtt53AiCYCMcaD7lHA&oe=68FCFA94" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552943478_1105215251798624_4489885506575021123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UX2Pg8GujyIQ7kNvwGtYi0z&_nc_oc=Adn85omnwvOCs-mlyEYT5WVdwmnmOQ_oXGPFkCfO37KU4GfAKRIIAwAg4vG3BSRLEQg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFLf9B6ArJAWc0xpbTt9Z1a54R4Ia5atVCS_K7JglPpsg&oe=68FCD6BB" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552719766_790978430769590_3653066779121054721_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=5CrJW7llU0gQ7kNvwFyZKQE&_nc_oc=AdnoW49k85pbiDXP7mRwrmnI7vP8Pfq7w67R8xA2VYMhZ_6H84kyL2I3pvzizJyr6zU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFXz4tNY2fx5YDma3Ox0xWFtdmYAWybR2-OF3yP4ULmPQ&oe=68FCD97F" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552543946_1352830886844537_3572879349122593783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=c93fTCfmqeEQ7kNvwHU7_fl&_nc_oc=AdmAoB-wkL-U2G9NvTLqlbeY1-60b-phX8IUyWpgQFgBGF3tqtpLqyo_etHfDxDzNMc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHj0nhTjExcy28-MZbqQsgaDgfI95ZgPz4gvQMsoDnbCQ&oe=68FCF8DE" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552095426_1533541014330280_5586501421516111199_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=exkJf1s2PsAQ7kNvwEjhwQy&_nc_oc=Adl6lxnbF7XxbTNLyWJOwAD_NG1Pg7WSJfF-m2VYafBV15C3ibC0nBPGrc-T2VC2M-M&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFCqOQkqFVnVggYChQUrAWx8KvT5RXGVcVOeutu9yCnOg&oe=68FCD4A4" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553270529_1330057798567918_2549239488541801134_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UKPeooUwKVIQ7kNvwGMX_cp&_nc_oc=Adngm0l2s9kwFJsMhgA0X0z_utHd6nx6GMNblET2h-TEHL4-UasI8AKZkhbQ2jjX4IM&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF9aiMyk7DPe7wH_Ry-yXmnJxrgNc52IGP8SCmoh2Z7Lg&oe=68FCF5EA" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553756625_781811661436253_7635289335867636007_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=O4dluHC322oQ7kNvwEjnPBz&_nc_oc=AdmJYpPVvgWRfi1GLUUmaYFNc2geyeJYe9khswVc15KbeQfhVH6yPM8k4rEKpdXSbWE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFxPhyjwFA6VvKy4-_HRGJPPbmWng30UA2WXoI8YglKQA&oe=68FCF8B5" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551705649_805173755210305_7877609419872980586_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=fq8xkmu54PQQ7kNvwEkXMJ2&_nc_oc=AdkQ-bXom6EiEgutP3oEYZw_YCTCrkF7kGPVkmgsTHxeNArrMYc7vjDvpd99kDMdHmU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGjIL6UlhbMlIQtrO1VgtorysX8vUgaOTQjgI1uV2kFMw&oe=68FCFA7F" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551583985_1853456848907275_9210870520096163230_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iUz9A5FJpI0Q7kNvwGnKCuV&_nc_oc=Adku3d6C6ga545YxqpmVhxe9pk5KuERIOOoomxvIqJQB9zQNyQHbjGtxpaEk0fdKE8k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QH3VmrbH6khMfUr_obp5Za-izhs0E-XJEKiHRwbNFQfpA&oe=68FCE4EB" alt="Memory 4"></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552214348_1350103246464369_5557436159444035519_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UicHDeFMjNUQ7kNvwFK1z9N&_nc_oc=Adkpojpw5ivQRXuPEkBGCiLrtQZt4mBkHw2j5UAZ30FQj_GJ5bYNwDNn9KQTflZ2fj4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QH9xJAlyR4VpqZCqMUk6fnnOFqRbfrV6aRUGL8fBH3Xxw&oe=68FD0171" alt="Memory 4"></div>
+  </div>
+
+  <div class="controls">
+    <button onclick="prevSlide()">⏮ Prev</button>
+    <button onclick="toggleSlideshow()">▶️/⏸</button>
+    <button onclick="nextSlide()">Next ⏭</button>
+    <button onclick="window.location.href='tselmuun.html'">🏠 Home</button>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    let slides = document.getElementsByClassName("slide");
+    let slideshow = null;
+
+    function showSlide(n) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+      }
+      slides[n].classList.add("active");
+    }
+
+    function nextSlide() {
+      slideIndex = (slideIndex + 1) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+      showSlide(slideIndex);
+    }
+
+    function toggleSlideshow() {
+      if (slideshow) {
+        clearInterval(slideshow);
+        slideshow = null;
+        alert("Slideshow paused 💔");
+      } else {
+        slideshow = setInterval(nextSlide, 3000);
+        alert("Slideshow started 💕");
+      }
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random() * 25) + "px";
+      heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 700);
+  </script>
+</body>
+</html>
