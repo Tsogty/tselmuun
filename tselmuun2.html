@@ -2,39 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>📸 Our Photographs</title>
+  <title>💞 Our 3 Slideshows 💞</title>
   <style>
     body {
       background: linear-gradient(135deg, #fff0f5, #ffe6f0);
-      font-family: "Comic Sans MS", cursive, sans-serif;
+      font-family: "Comic Sans MS", cursive;
       text-align: center;
       color: #333;
       padding: 30px;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     h1 {
       color: #ff3366;
-      font-size: 38px;
+      font-size: 42px;
       text-shadow: 2px 2px 8px rgba(255, 51, 102, 0.3);
       margin-bottom: 20px;
     }
 
-    .slideshow {
-      position: relative;
-      margin: auto;
+    h2 {
+      color: #ff66a3;
+      font-size: 28px;
+      margin-top: 40px;
+      text-shadow: 1px 1px 6px rgba(255, 102, 163, 0.2);
+    }
+
+    .slideshow-container {
       width: 100%;
-      max-width: 700px;
-      height: 750px;
+      max-width: 1000px;
+      height: 1000px;
+      margin: 20px auto;
       border-radius: 20px;
       overflow: hidden;
+      position: relative;
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
       background: white;
     }
 
     .slide {
       display: none;
-      width: 100%;
       height: 100%;
     }
 
@@ -44,18 +50,8 @@
       object-fit: cover;
     }
 
-    .active {
-      display: block;
-      animation: fade 1s;
-    }
-
-    @keyframes fade {
-      from { opacity: 0.4; }
-      to { opacity: 1; }
-    }
-
     .controls {
-      margin-top: 15px;
+      margin-top: 10px;
     }
 
     button {
@@ -92,83 +88,112 @@
   </style>
 </head>
 <body>
-  <h1>📸 Our Precious Memories 💖</h1>
+  <h1>💞 Our Beautiful Memories 💞</h1>
 
-  <div class="slideshow">
-    <div class="slide active"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552641615_1505704747412903_1661545234535525015_n.jpg?stp=dst-jpg_s526x395_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=vcDlN5-8rakQ7kNvwFa8PqP&_nc_oc=AdmgXakQVmE_yqm5dva55lMhZOCDv9Czea3UCe1B-9rfmVfZDc6Zo847dqhaOYbSvbg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QED_Ov_kRRRvkO1u5DEv4AlBqBmW6E5beCYSY6ThfJqMQ&oe=68FCE443" alt="Memory 1"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552585435_1841640216788850_3965982205370596091_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=3W2qp9v4__UQ7kNvwGV6QIH&_nc_oc=AdniDmCl8JbVbF09i2VhD_FE6UJ5PGBxKCsihdJX8nfdeQckxidk_8pSFN9jNpstBJo&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHl0ds4n9aYcsGNkx-Wyo-xGoeXvypdPwmvuolmaOuAnQ&oe=68FCD7F0" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552640626_1330097295223010_3293159605404928263_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8krvJw0Me34Q7kNvwFAxX2w&_nc_oc=AdltegtP01vWzxlfBCW9hyriTQprOIoXCev0-LpxxVLz8wPyFW1KPSVd6CaLxhx_cYc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QELO4y0wn76L4-zpWKjRUcZOByEZYM-EaPMwtjnF9LRjQ&oe=68FCBD09" alt="Memory 2"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551521748_1826905948179562_2268552037076513664_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=J45hfE4sSacQ7kNvwHrr4PS&_nc_oc=AdmE__V0bGrMBA2pmOCgSH3mPVPAuxGZSbMp4fYwuB6v8IcJ51-Nquba-fWArtWi60A&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF1X4KDkrh8KEgzwWpu9tVazZy7nW2HZuJqTmIxa7O7uQ&oe=68FCE4D4" alt="Memory 3"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552024958_776983651719726_6742335866272362821_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mvXRWXdVt7IQ7kNvwGWSXM5&_nc_oc=AdnBhVH-AwF37Bihepc3ewJS7oVdIE82PeiqON--xsnOZsyMfP3kulPqkbTQ9xN6E6w&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF7ln1BqKL0phlXbjRTlIKlGltT3OZkwuE9rVdjhBT56w&oe=68FCC89E" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552043056_1531397501647166_4396807686803253910_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Z3fX-D3FlwwQ7kNvwGspjkY&_nc_oc=AdkuWcA3Zc0M4O5D5rCwvOmfbUMp3GnEah6Ud5dMEgR61LKX4Rd8JePQBbajB7noD1g&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHz746ztKVM3qc9hf0TNt00DqZZcnh9GQ6FL1iEP9pATQ&oe=68FCEAF9" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552447138_1994341144736149_5194530607319951358_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=guO5QKqrYaUQ7kNvwFNAXan&_nc_oc=AdkDlWXFAkpSmvXINStReJuhliWleG18jkJLMOUK5E9dSEzOHn6jxfZRBD87ns6bn8Q&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHWAI3kOBE13_QJ3JxSsxWZWNiutzZJp1K47KQY7fHkKA&oe=68FCE6B7" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552427642_800483342470834_768807288175821528_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pB8oidRbH9kQ7kNvwHHMg6N&_nc_oc=AdmudLzLR9s5jeW5UapSpTaCmA_JW4z4ZM91dVjnNJas4SzQxmRNAiPpcOosvapWmAQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGPj-HLHB86s3VSOjd3xa9sCcf5mN4SfCwxAlP4ZSKDhg&oe=68FCD7E6" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552671218_1854336702129642_6447236696827254315_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=n6R9AvKIjQ4Q7kNvwGmjNHM&_nc_oc=AdnC8YjAKv8toyHouKT2VkYzva_g321F5ls58Zj7lZ8LVS3Mymo7Nw-jSvHnEqtfVgc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QE8wcDsTaYqHmRUSCjqWqdteLtdInV-GpHmy7_N8rTKBw&oe=68FCD97C" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552881957_791087746899121_2678338614030692642_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=jHQ4kUX2IUsQ7kNvwG17m8M&_nc_oc=AdnSy3zX6uglZxBskmXE0G5yn3Fv6pZGbaPp7Oqsoawk7KMyhhcksyOKO_HTwKgz52k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGzgNFc1UYZdTCQyn9G_hdQrNBUKlBA5mOqRuL8MlmDQw&oe=68FCEB3B" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551796189_1419906702444659_1013564178778342755_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Kj1YAqH3FAwQ7kNvwGbyCn0&_nc_oc=AdkZcym11nsTqpcS8CHuQZGfI3KjLp5B_JhBTokCWFUxknKVkTfdzPzbq6yt6rGdDbQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QE8diyPi8J5mVeBovMOjNl5duwH724B_LdFb7OQBYM2NA&oe=68FCDFAC" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554813577_1140682131341244_5066470763509352986_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rcALgqifStsQ7kNvwG1ZQs9&_nc_oc=AdmUyOzwyE3h6R3Pr9bmXd7eVa7aU6qFvocXDy7gEXipZik__3YdB9CaT0y0_rqRrfA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QEefSFjm0QXFgloQbG4F0jAKFqVk_8gXi1IVjBzHuF_mA&oe=68FCE2AC" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552533887_1989393958297354_9103929415140615619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VSgIxVpKrL4Q7kNvwEgt9sn&_nc_oc=AdnB_q0GQpEzOJe_d5SKcFgXWH2YlmjzfxcV6S73xcZENs4QdWWkoXz1z223PKgFDA4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHtX2fxLCOpsGoQ0Xa8RXkQ4tVJcba99xyY_mIsxLewzA&oe=68FCC61E" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552676928_1115372940710858_5586007837843428002_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=g3bYNCPn2CYQ7kNvwH2GKgp&_nc_oc=AdkYNSlEPSGo8Z4hshbwjtdEiIoqgn80YjAaR-2x14vgliNkcBItkYXeBAhTMX2_kCI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGVGqP_QAq23X-afIIff5wI4rO3HEimrvC24dQogzTXLg&oe=68FCD01D" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552916574_2780952552107987_5060286844175490713_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0e1T20FyXsgQ7kNvwFJpKhO&_nc_oc=AdlLD_c0tAO0WlUTOI7JKM6VffjDok_zqbykmzqYa40dnrpD-hAT6GJhoFhLgCNz00w&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGr3eaKvUgmv4oWI0G297B-hlxNkAHbveHSI3DvyW13vA&oe=68FCD8D7" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552714151_1156515726382753_7104402338677610659_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=LLOqzOTuFyYQ7kNvwHpp30m&_nc_oc=Adk_LEdXARj3Y7mVjISRdXh9zWjRfTXudgSwB3rpduneYJDzPYMJjF8cfIOQatV93CI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFXKfwTlM4Zsuz1Nt7wtV4DbYJhPC8MMoWovZfEQVF6Ag&oe=68FCF46C" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552164553_1736607607004970_1100248294196324489_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=laj7mmRqtOUQ7kNvwEkO6qm&_nc_oc=AdnE4VAfxwZj2gTr7UCLZIvSwSZtR__PGnM1jyWtig4hvShrNaQ5IoOz0RSaiTyxB4E&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFvQwMWc9FSHUOexMfAUWov4KTOtoCyEDUvSwrxUaSUqA&oe=68FCD4D5" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551757772_25038857759084980_9001218403825351820_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=NjcFSBVkmo4Q7kNvwE73tyQ&_nc_oc=Adk3LkgS1bb9z5R5Jka6k2KELbNw9PaGVNDc5TRaYOpOfaD7kDT13TdtO7nsZpq18i0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHeJw7crrxo_pNx34aBhBdz6KH8G8RcGEAnpnhPJM59bg&oe=68FCE180" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551890419_1250710700430884_4594843390372396240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7WNyRCR7g_MQ7kNvwGZyf2I&_nc_oc=Adm8HyHeILHf3WTIiRbTCdT3MOYLbxqdbWkrJnhisGvATTE3TrKOhdhP3V63PWfLdCk&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGTa0BcGr6dOswBFhKhzvInyygt8qBUGYrTFrUrLSy3cw&oe=68FCCC4A" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552589951_25238206285763350_1789066670447357636_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KludddY6hhcQ7kNvwEUnv8D&_nc_oc=AdlvXJdcBxW4M0hag-EznnD-nP5u2Hofbw-p3xzyCt7x42E1YRaew3N2KldizwZmBto&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF_J0S4a0ViyWfa6X9Y434WhxMJhSDy_lU4p2pHleyCNA&oe=68FCCA25" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552646816_1146001840737227_2424688650273987125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=cHTbL_NA-4cQ7kNvwGzyyiF&_nc_oc=Adn1awP22VHeo9LQOYISEfswGvxgQyA0sXxIhkXEil6tqf1EuGZ0Ysz7Z-OT8bj15Uw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QEn2Jl3A_lIgtbhWFSUkKwCSJrE0_KWk8uNIW_gP7XLLA&oe=68FCBD36" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551868553_1565816911065348_3111001640974475706_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mkXCSftav4gQ7kNvwHWSDII&_nc_oc=AdnJOosn8dfYTdNgL5ZVpbmZyFJIpvaqMHrXYV_wI9x7lI46RyLX8RoQBRPpAIjU1P8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHSv6udJyVeUhjuq7CRze5yrqlQMuEo1ci_u-xVKT754A&oe=68FCCCC9" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552692236_24674442642165001_183796185755762850_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=F1rsIQ4ZI9MQ7kNvwHLZSE8&_nc_oc=AdmdUAsG3DIPtZbc20Q9Or7cBG_8vS31plA1IL4LHv66BVHwUDDQ2ETBHo1padUDIOc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QG9uY2b4MrLUp_-9VQ9H6-IPxiPfUGHc9-Sn65GPrQhEA&oe=68FCBDF1" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552365244_24592685807062272_5716030234628956139_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=PkHgp6ztKMoQ7kNvwGxeoJ5&_nc_oc=AdmiJUF0_yG_MnP_JnzE59pSnW-gy_LyEx4Aa2a_h0yH64GkNIDAIsZIVNSWHmEZr1c&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGI2JScZEssiRoQ4-X5nRIxn37cP39ZNFw_FAkUWgrsWg&oe=68FCEA43" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552889306_801196645644649_4207363879347710441_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=vYTRQXHLAmQQ7kNvwFGYpS3&_nc_oc=AdlN8NSAoEXKRp7EkvKSUNb0o5YQF77uR3vo9QDhBALueGu-MteQIlvwFPm_Zignkoo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHancdNDkbpW88s8rfcbIa_oIat5xiWWk_0k7pG1gn9DQ&oe=68FCFF1E" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552544167_1127083226055092_4318015423771392047_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=TzDgx0A-m_EQ7kNvwFO7V4e&_nc_oc=AdkStC_2A-W0rV2sxAdiNyKjh-d9o0tpxUiuuvCYgb6k_yGBcIYlNrwk1kyiSc99fwM&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHObKQg5VyrsuuXF0YhTujMdMnkrtt53AiCYCMcaD7lHA&oe=68FCFA94" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552943478_1105215251798624_4489885506575021123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UX2Pg8GujyIQ7kNvwGtYi0z&_nc_oc=Adn85omnwvOCs-mlyEYT5WVdwmnmOQ_oXGPFkCfO37KU4GfAKRIIAwAg4vG3BSRLEQg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFLf9B6ArJAWc0xpbTt9Z1a54R4Ia5atVCS_K7JglPpsg&oe=68FCD6BB" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552719766_790978430769590_3653066779121054721_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=5CrJW7llU0gQ7kNvwFyZKQE&_nc_oc=AdnoW49k85pbiDXP7mRwrmnI7vP8Pfq7w67R8xA2VYMhZ_6H84kyL2I3pvzizJyr6zU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFXz4tNY2fx5YDma3Ox0xWFtdmYAWybR2-OF3yP4ULmPQ&oe=68FCD97F" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552543946_1352830886844537_3572879349122593783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=c93fTCfmqeEQ7kNvwHU7_fl&_nc_oc=AdmAoB-wkL-U2G9NvTLqlbeY1-60b-phX8IUyWpgQFgBGF3tqtpLqyo_etHfDxDzNMc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QHj0nhTjExcy28-MZbqQsgaDgfI95ZgPz4gvQMsoDnbCQ&oe=68FCF8DE" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552095426_1533541014330280_5586501421516111199_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=exkJf1s2PsAQ7kNvwEjhwQy&_nc_oc=Adl6lxnbF7XxbTNLyWJOwAD_NG1Pg7WSJfF-m2VYafBV15C3ibC0nBPGrc-T2VC2M-M&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFCqOQkqFVnVggYChQUrAWx8KvT5RXGVcVOeutu9yCnOg&oe=68FCD4A4" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553270529_1330057798567918_2549239488541801134_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UKPeooUwKVIQ7kNvwGMX_cp&_nc_oc=Adngm0l2s9kwFJsMhgA0X0z_utHd6nx6GMNblET2h-TEHL4-UasI8AKZkhbQ2jjX4IM&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QF9aiMyk7DPe7wH_Ry-yXmnJxrgNc52IGP8SCmoh2Z7Lg&oe=68FCF5EA" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553756625_781811661436253_7635289335867636007_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=O4dluHC322oQ7kNvwEjnPBz&_nc_oc=AdmJYpPVvgWRfi1GLUUmaYFNc2geyeJYe9khswVc15KbeQfhVH6yPM8k4rEKpdXSbWE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QFxPhyjwFA6VvKy4-_HRGJPPbmWng30UA2WXoI8YglKQA&oe=68FCF8B5" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551705649_805173755210305_7877609419872980586_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=fq8xkmu54PQQ7kNvwEkXMJ2&_nc_oc=AdkQ-bXom6EiEgutP3oEYZw_YCTCrkF7kGPVkmgsTHxeNArrMYc7vjDvpd99kDMdHmU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QGjIL6UlhbMlIQtrO1VgtorysX8vUgaOTQjgI1uV2kFMw&oe=68FCFA7F" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551583985_1853456848907275_9210870520096163230_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iUz9A5FJpI0Q7kNvwGnKCuV&_nc_oc=Adku3d6C6ga545YxqpmVhxe9pk5KuERIOOoomxvIqJQB9zQNyQHbjGtxpaEk0fdKE8k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QH3VmrbH6khMfUr_obp5Za-izhs0E-XJEKiHRwbNFQfpA&oe=68FCE4EB" alt="Memory 4"></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552214348_1350103246464369_5557436159444035519_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UicHDeFMjNUQ7kNvwFK1z9N&_nc_oc=Adkpojpw5ivQRXuPEkBGCiLrtQZt4mBkHw2j5UAZ30FQj_GJ5bYNwDNn9KQTflZ2fj4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3QH9xJAlyR4VpqZCqMUk6fnnOFqRbfrV6aRUGL8fBH3Xxw&oe=68FD0171" alt="Memory 4"></div>
+  <h2>💗 1. Tselmuun 💗</h2>
+  <div class="slideshow-container" id="slideshow1">
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552626555_1133670534901251_7626644314114705304_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Fl3o7S3f2z8Q7kNvwFs3gCH&_nc_oc=AdlGtS61MDCobBrzrDHq77TgvbyixPOQnB7wB9ghrU78F9mCCTbJs0Lq2O6Eb5XAn84&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGXSUkLgMy6n6-gG7qc989bSGHZxKQr_7j047d8V7mq2A&oe=691A0ECA" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552788974_2912973365756879_7987290996410430334_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rFHiCC7cKwwQ7kNvwEpmd2u&_nc_oc=AdkTD2ES8UcLD06u116fo6htwAKUhAQi_e8SLweOkCxfTe7xXrBLbtHWWuenf43xWoQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEwd4BdwppdQvGouVKUaqHLVQ_45P3kpvpxDBFMe1T0WA&oe=6919F9BF" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566519777_1389051892789523_8608128153712892324_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=4axxfYK7fs0Q7kNvwFP7bQh&_nc_oc=AdnMdJGm7LedNPk_950Zte2uDQrpDAw8vZcNNeWopflh-7w7OVXNC6pGayAY8DY6idA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEVUu3WVqqe4bNzKEttjQPkTFOCT5LIoIDtZgeHlptBqg&oe=691A03E5" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566561212_831216275986319_6726586733472361435_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=RG0v6-2EjxwQ7kNvwHTaCbH&_nc_oc=AdnfDAp-zw56p_xtBUy3rfiewZyzjTLMen3k-AFuknwO-q6FxMirnOdIcKPMyy31nA8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHpwm08NYD8iaEyN3tCvPAUtyZRCdq-OMuVMSvlNIFzKg&oe=691A1650" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554994153_1599020074815438_8140467981090537635_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pfP9otlNLYoQ7kNvwFpkJsZ&_nc_oc=AdmgHdwIjGyId1unxf6PLnUMjK1CdQgqDouptDOXYqlhhtBPoSxRcfkTBP75ndImi7Y&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEh5ixu_N4Kkenjvx6PynG-k0-WTLsnBMf5S_XImc5xug&oe=6919E650" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553756625_781811661436253_7635289335867636007_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=H9qXChTsLxcQ7kNvwEZbfrI&_nc_oc=AdkkftIw5BzpFmSqM-zlsA46ifH8C3xKPa26atwEFoXt9lKLGZa9j5xUJrOap_VzGbg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG5oXtI6TcdxHAg5DLlE3NYkN69-BfKxIos5NL3WaMJTw&oe=6919F9B5" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566422645_4238260813108450_8297760234030122358_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=JrWL6fPe9vgQ7kNvwHPu854&_nc_oc=AdmpQdZJKdNkras7Zj5tjNjNT2Ix96ugFQ258sLr94p9aiwXx9vU43DGWYqlOn_v2sQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG26H4IrB7f6r65GLRxqm5oepsL6TzN1MvLHIb1ettUgw&oe=691A062C" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/565504058_1854029525148493_6110712338890915782_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ugRvIjwjWCkQ7kNvwG5VL1M&_nc_oc=Adk8p6yrBAVPC4XByt9_wFR3oNey1gh_JZw4lxeSygdj-WuhI0oggi6lMmvvG0ljJK0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGW88cn3e9L2fJPT6VqGJZKlaDlBUmt0QcNmsflgeAasg&oe=6919FF2E" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554111661_1332279728438366_6421756982226233336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=BD0DPCBq3_UQ7kNvwFZw7Rj&_nc_oc=AdngHRGi9ZcG7TU_IapSh_WFJGvcDAuC3qqX2VWmMQhmOBL2vWD2vvi9L4ZC4SeUz-4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gErNyaxirXYkQ6JNWP77R3-b0It1_pAqrXPqqRNTfR-pw&oe=691A0289" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552676928_1115372940710858_5586007837843428002_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=lEKF0JFpLvUQ7kNvwF8y1i0&_nc_oc=Adl9OKgg-WKf5wrQwbyS4FavLX0Nvz8sKqPC-cQwbclBqYShmSRJM6o3SGBpsLHiLao&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEbd3G1X8Q6cdCQikO3fsA7f3bOOLrq8N2mj-r5j0QRog&oe=691A095D" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552164553_1736607607004970_1100248294196324489_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=bu5fkHNYu3QQ7kNvwFtYIgC&_nc_oc=Adm3BwxhbbjBZ-kcFbq01X4B9WQzNTsVsokbzbPbxZuYt1cey8k0JOYkwuE1Se5YHGI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGqTaf1P-_Wr_W5NtOaHQJFRwSpEZ13Ivtva1vYejZhHw&oe=691A0E15" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552714151_1156515726382753_7104402338677610659_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=932mzDiJPogQ7kNvwF85hSA&_nc_oc=AdmP9WmBGQHBdbG0sZhbTu_6Aryb0T0gPpmTNFckv5_uwYHWD6aXF1JMXBVnJo0enEE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFYAA7eF3EvYnGeRS6dw392jzMzCnUX9CnYLt4b7FdVJw&oe=6919F56C" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551890419_1250710700430884_4594843390372396240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kh-FF8t0Ot4Q7kNvwGglQAr&_nc_oc=AdmfgIh-nvgT-DCEe24BxtbEdFrevSlrRvUsslHeLi05I90qkDy7buWtq_D6rixNlb8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEohnZDj8prTSQpk7l2a2NUOOTDCEKlCaaaHzBQaorkCA&oe=691A058A" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552190785_827349039729076_8316692002386538803_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=6UkggYAGUikQ7kNvwEyvbd1&_nc_oc=AdnkG903giot5lyCpyHY354L8F7yGqCllWmmXobxQHnm40HnEBVeLU3qi7vM5YkXxUo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGolSh6-AI9v84ntY3ekwQb_eEkgofP9r5av-J9omCObA&oe=691A04E9" alt=""></div>
   </div>
-
   <div class="controls">
-    <button onclick="prevSlide()">⏮ Prev</button>
-    <button onclick="toggleSlideshow()">▶️/⏸</button>
-    <button onclick="nextSlide()">Next ⏭</button>
-    <button onclick="window.location.href='tselmuun.html'">🏠 Home</button>
+    <button onclick="prevSlide(1)">⏮ Prev</button>
+    <button onclick="toggleSlideshow(1)">▶️/⏸</button>
+    <button onclick="nextSlide(1)">Next ⏭</button>
   </div>
+
+  <h2>💞 2.  Together 💞</h2>
+  <div class="slideshow-container" id="slideshow2">
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552640626_1330097295223010_3293159605404928263_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Rpg_dAw7O74Q7kNvwENp81-&_nc_oc=Adkki6rjeNgG2p0F_XxqACwhkU-CHG6v3_128G347ftsnmYhr2rTU544lo_pgp7hk6o&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEChw-TOlQchlwOFkbegXcQIxiVAxJsozQniwrCcjdU2g&oe=6919F649" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552883633_1325171249017904_5728727890075696261_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aHboTZ_sJkEQ7kNvwEcXg1G&_nc_oc=AdnjxvseEd6ni4NhW607AIr9FaF1ANdzoYFxehq8hqw50mwRuShgBWNSufgKTuAwCYY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGk9pDq13l18H-rbEoBHWudh1-fH2OxXT2KahFwlSC42g&oe=691A0293" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552024958_776983651719726_6742335866272362821_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=QJT7oPIOHLAQ7kNvwHRrWA8&_nc_oc=AdnI1tXvCFox5jgA4VgwIvm9IuKlcu--LtxXE4ADlSHbf4T3trEMmmSz6yBiL0nblA0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG9-Lm0bIB9N4b_WD1cJe4c5crXFvh2qVLqyGEx0dQfeg&oe=691A01DE" alt=""></div>\
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551521748_1826905948179562_2268552037076513664_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=fLRt-pnVWOoQ7kNvwHD34ki&_nc_oc=AdkegdTgGt5Jbkc-OID30cb4H8t3utKpGhDhJjA5MWba4XPWNEV0RQLsxscSDUsEmfE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gF75Z08G_xla8n0KC5RcI62gvaYCYIgFWbfGhQ5saDzTA&oe=6919E5D4" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566614851_1148557997241579_3712008741050514557_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=im9z24MXJbcQ7kNvwEiiS2x&_nc_oc=AdnnuaHtR7Y65vwz-RYFte0F50ILCSCC-lESrfr3zAxWcbm3LG78FSemV6PFM9f2dl0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGtaEIysD8REDtBEWTsdFLNnCynmI_auFS3RzplLrUDgA&oe=6919FFB2" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553270529_1330057798567918_2549239488541801134_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=2ZrCL6rV63UQ7kNvwGbtAWY&_nc_oc=Adl_Xttgutsh-5egqG46E0vJor1HO-hy2hgzs7ABjZYZKflAOUwbqeJDO-ApzjVq0ZA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFDgntyjb8N6_XLlisxTEfh6_CQZWmPP9rAJ4F657uOag&oe=6919F6EA" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552943478_1105215251798624_4489885506575021123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=4H8vn4AqMMYQ7kNvwGwISzM&_nc_oc=AdmtZvvFkn7MLAFWAxe8f4uX41BpBoo51a60oPOE5ObTG3YsO_7UXQVndg5bZNZt61c&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gE4MVInUBBpGUW4I7Dgix5TBVDPtlSanF1XwIRGtL_j8w&oe=691A0FFB" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552533887_1989393958297354_9103929415140615619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=DBx9mnnovi4Q7kNvwGoB6Ff&_nc_oc=AdnzqIV7YriiBO0gIMxlaNM0aoDClMPDBLSSw4KciUrbilCH_eWxCcTU5fLpIjoON7s&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHAfwNc3rCUn4LYy5Oo_Tk8-pOnvCwagon3V0WyM9b8JQ&oe=6919FF5E" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566560271_1153080983454081_6051225469379728992_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=5dDSGoqYrgwQ7kNvwF8i31a&_nc_oc=Adn-vwhJpYwzn-KLijaOcrOio7-OJIdm1scGgb7VqynU-ZH0iRLuqYHQzXXHsdo_au4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEuymD34Q8hee_YJmdgaFXKrT6L-24RZ-M2VNttFX5gBA&oe=691A0C16" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551868553_1565816911065348_3111001640974475706_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=uNp4bR3IjNgQ7kNvwEuDXgj&_nc_oc=AdnUAopREy42X2HlT6Jj7J6Bf4fvlLbPDZKi8bEW7sFz1z51NYFOfXfLNzpTz8SbUfY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEoHeSjMC1Khyzsi5sgmxPTf7aQfcLgTb5oQNXq_xfgeA&oe=691A0609" alt=""></div>
+
+  </div>
+  <div class="controls">
+    <button onclick="prevSlide(2)">⏮ Prev</button>
+    <button onclick="toggleSlideshow(2)">▶️/⏸</button>
+    <button onclick="nextSlide(2)">Next ⏭</button>
+  </div>
+
+  <h2>💘 3. Ireedui  💘</h2>
+  <div class="slideshow-container" id="slideshow3">
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552447138_1994341144736149_5194530607319951358_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kXMaXBjND2AQ7kNvwGfJBUC&_nc_oc=AdmJYRQbz357INlG_DCsQsRIRe9YWw2lMiFxQ9p5gauEI1_02l7EiQN9REIKhL6xRSw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHTD5A44ja3xWWVYOtIiyelwS4ABNe37d2VZx0oUrgn6A&oe=6919E7B7" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552427642_800483342470834_768807288175821528_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0qdQb0xn6V0Q7kNvwGeqwQV&_nc_oc=AdmnBZERZ2xXAzm2sjRCAgIEv6FCSyrCw_H3bonr1pnoHCvbXW0hkl7bUCL7EbkE1ns&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFDL1RU30kIN7t4TP6tOj67Uf0OSrMkpG2zd79YO-ODUg&oe=691A1126" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552585435_1841640216788850_3965982205370596091_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=XdYKCXE2VpEQ7kNvwG8fi5N&_nc_oc=Admydhostz_koVQ_1csTzFMljwiPtAaQmKXdP7cte95wZzxrd2MjQVHEnii1Xp9vzeI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEtyzavspgLT8z9flkQxtQCPJgODSTGei3zSesePOxoCw&oe=691A1130" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552543946_1352830886844537_3572879349122593783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=1PM3ZL84KSIQ7kNvwFTLBho&_nc_oc=AdmON7FgKTty5SFKFNJxgK1uxXO4ZcOsnxTq5SJfy2yv0MFSKZSuRheOkZ46kYvyXWw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFhHxh6xaSffS1wNy0opIWSmbRKwhwbxwNMKClPnRePjQ&oe=6919F9DE" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552889306_801196645644649_4207363879347710441_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7LBegLbnB64Q7kNvwEEY7hn&_nc_oc=AdnoXQwGY0UPj9j4O8cEdZ0QirgQGdmk4k2uIKzlNi_3xjfvQVnOBfQmcYsLZgUiSM8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGYnccclJOT3DQupwgi0KDI7VPovT6RCZhQuec6BR64Cw&oe=691A001E" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552719766_790978430769590_3653066779121054721_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VPLlnhgyCLoQ7kNvwFSgbbG&_nc_oc=Adml-EIgtOLzKpYgrZ7PhBrWlkJu-MraMy4ib0gmsdWXb2ZlLKXeSX73PGOsKZkTzfI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFIi0LRhSUvXIUVog3NhREkiADCQjqM63PXEr6iLieSSw&oe=691A12BF" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553732536_806878455175275_463495721861096051_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=keAk0bI9WB0Q7kNvwHvwLSz&_nc_oc=AdnC6Ld3cREeE0edABYscwz9bNePDPpDNPvXEIvwQoOd7trQuDV4W6d5wsRlZHOgE4k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFxs4ZKI4WXlVI8dHkKxWc_mFVBCnJ8J0Vx_mx_9Vf_yA&oe=6919F8DF" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551796189_1419906702444659_1013564178778342755_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=-MDeL_2tguIQ7kNvwH3UdeQ&_nc_oc=AdnJFb___9LXLViuXySnsVv2U4WfI7tCaAlVU2zzFmcUJ-9_HxUukWkeDTr1XdnVHa4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFoM51AzfTxkCnfAk4RSFOf0f-salD1rV9zAewVop-bZA&oe=6919E0AC" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554813577_1140682131341244_5066470763509352986_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=6Jg3NwVFNYoQ7kNvwGjr_xI&_nc_oc=AdmrH2QRG0tkzbFO47nM0SI-tImuNYVmPVn4RcBx9Ts6RV1qvwdqZ88eClPj9VGhAac&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG68lQz0EnX-d6LNYa17ggahq61zcaQAEQ6XjyjetfC5w&oe=6919E3AC" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554219824_1231730782308689_2367801228185575352_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ZVggK38F9kMQ7kNvwH0pQOq&_nc_oc=AdmpPCA6sqpcP3ytvsAx_tZtCYiANyUpSy5bbkE6v1f0HDQLfVjuPRZrDl4jcrkznwA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG6Rwq8qDQfwUs8F8EIdKP861LZGMWP2u9TIKGwwsi-cA&oe=691A04DF" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552732422_753567444343743_5159681768785555116_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7E53kSehUZMQ7kNvwFv8doA&_nc_oc=AdnQk3HNyy7vY9SkGcMeoc0Amb7PC53Buqsrt7dVBEyyXaGKtjbrgbW_GNlTRQAZfcA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gH-FwkbzLE6PNO0lBW8UZoD8XedVFUSNk2JPL41xQgFfQ&oe=691A1478" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552646816_1146001840737227_2424688650273987125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=bME-BDdeLbMQ7kNvwFW0vE2&_nc_oc=AdlCclK44YcOnOlrl2cW0bIcn37Ct7JXJQ4qcFrksQPLdFh8oMY9Tv17aHWG7KV9zQI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFJdCxynTFmurafiTP-GcGMzkuv7g4MlXEZwRZ5pWBMAw&oe=6919F676" alt=""></div>
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552916574_2780952552107987_5060286844175490713_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iktwPKn6yfkQ7kNvwG6iFHO&_nc_oc=Adk9OrnPNRYuj6iNvG9SCEcPLpiaG_I3x30-oQe2QsiiOaFMClnM0iVA_S2vcmRT0NQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHcg7XXSLjWSDN64-cIwUx0gmofOWH1LvOuU4_k4mudbA&oe=691A1217" alt=""></div>
+
+  </div>
+  <div class="controls">
+    <button onclick="prevSlide(3)">⏮ Prev</button>
+    <button onclick="toggleSlideshow(3)">▶️/⏸</button>
+    <button onclick="nextSlide(3)">Next ⏭</button>
+  </div>
+  <button onclick="window.location.href='tselmuun0.5.html'">🏠 Home</button>
+
 
   <script>
-    let slideIndex = 0;
-    let slides = document.getElementsByClassName("slide");
-    let slideshow = null;
+    let slideshows = {
+      1: { index: 0, timer: null },
+      2: { index: 0, timer: null },
+      3: { index: 0, timer: null },
+    };
 
-    function showSlide(n) {
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active");
-      }
-      slides[n].classList.add("active");
+    function showSlide(n, id) {
+      const container = document.getElementById("slideshow" + id);
+      const slides = container.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+      slides[n % slides.length].style.display = "block";
     }
 
-    function nextSlide() {
-      slideIndex = (slideIndex + 1) % slides.length;
-      showSlide(slideIndex);
+    function nextSlide(id) {
+      const s = slideshows[id];
+      s.index = (s.index + 1) % document.getElementById("slideshow" + id).getElementsByClassName("slide").length;
+      showSlide(s.index, id);
     }
 
-    function prevSlide() {
-      slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-      showSlide(slideIndex);
+    function prevSlide(id) {
+      const s = slideshows[id];
+      const slides = document.getElementById("slideshow" + id).getElementsByClassName("slide");
+      s.index = (s.index - 1 + slides.length) % slides.length;
+      showSlide(s.index, id);
     }
 
-    function toggleSlideshow() {
-      if (slideshow) {
-        clearInterval(slideshow);
-        slideshow = null;
-        alert("Slideshow paused 💔");
+    function toggleSlideshow(id) {
+      const s = slideshows[id];
+      if (s.timer) {
+        clearInterval(s.timer);
+        s.timer = null;
+        alert(`Slideshow ${id} paused 💔`);
       } else {
-        slideshow = setInterval(nextSlide, 3000);
-        alert("Slideshow started 💕");
+        s.timer = setInterval(() => nextSlide(id), 3000);
+        alert(`Slideshow ${id} started 💕`);
       }
     }
 
@@ -183,6 +208,11 @@
       setTimeout(() => heart.remove(), 6000);
     }
     setInterval(createHeart, 700);
+
+    showSlide(0, 1);
+    showSlide(0, 2);
+    showSlide(0, 3);
   </script>
 </body>
 </html>
+
