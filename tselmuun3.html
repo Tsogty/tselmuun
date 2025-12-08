@@ -2,81 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>🎶 Our Songs</title>
+  <title>💌 A Letter For You</title>
   <style>
     body {
-      background: linear-gradient(135deg, #e6f7ff, #f0e6ff);
+      background: linear-gradient(135deg, #ffe6f2, #ffd6eb);
       font-family: "Comic Sans MS", cursive, sans-serif;
       text-align: center;
-      color: #333;
       padding: 40px;
-      overflow: hidden;
+      color: #b30059;
+      overflow-x: hidden;
     }
 
     h1 {
-      color: #6633cc;
-      font-size: 40px;
-      text-shadow: 2px 2px 8px rgba(102, 51, 204, 0.3);
-      margin-bottom: 25px;
+      font-size: 44px;
+      color: #ff3385;
+      text-shadow: 2px 2px 10px rgba(255, 50, 120, 0.4);
+      animation: fadeIn 2s ease-in-out forwards;
+      opacity: 0;
     }
 
-    .playlist {
-      max-width: 650px;
-      margin: auto;
-      background: white;
+    #letter {
+      width: 80%;
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
       border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
-
-    .song {
-      margin: 15px 0;
-      padding: 15px;
-      border-radius: 15px;
-      background: #f9f2ff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: 0.3s;
-    }
-
-    .song:hover {
-      background: #e6ccff;
-      transform: scale(1.03);
-    }
-
-    .title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #663399;
-    }
-
-    audio {
-      width: 100%;
-      outline: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      font-size: 22px;
+      line-height: 1.6;
+      color: #a60055;
+      white-space: pre-wrap;
+      min-height: 200px;
+      opacity: 0;
+      transition: 0.8s;
     }
 
     button {
       margin-top: 20px;
-      padding: 12px 25px;
+      padding: 14px 30px;
+      font-size: 20px;
       border: none;
       border-radius: 25px;
-      background: linear-gradient(135deg, #9966ff, #cc66ff);
+      background: linear-gradient(135deg, #ff99cc, #ff66b3);
       color: white;
-      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
 
     button:hover {
-      background: linear-gradient(135deg, #cc66ff, #ff66cc);
       transform: scale(1.1);
+      background: linear-gradient(135deg, #ff66b3, #ff3385);
     }
 
-    .note {
+    .heart {
       position: absolute;
       bottom: -50px;
-      color: #9966ff;
+      color: #ff6699;
       font-size: 20px;
       animation: floatUp 6s linear infinite;
       opacity: 0.7;
@@ -86,60 +70,170 @@
       from { transform: translateY(0); opacity: 0.7; }
       to { transform: translateY(-100vh); opacity: 0; }
     }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
   </style>
 </head>
 <body>
-  <h1>🎶 Our Songs Playlist 💜</h1>
 
-  <div class="playlist">
-    <div class="song">
-      <div class="title">Song 1 – Our Love 💖</div>
-      <audio controls>
-        <source src="song1.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
-    </div>
+  <h1>💌 A Letter For You, My Love 💌</h1>
 
-    <div class="song">
-      <div class="title">Song 2 – Sweet Memories 🌸</div>
-      <audio controls>
-        <source src="song2.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
-    </div>
+  <div id="letter"></div>
 
-    <div class="song">
-      <div class="title">Song 3 – Forever With You 🌙</div>
-      <audio controls>
-        <source src="song3.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
-    </div>
-
-    <div class="song">
-      <div class="title">Song 4 – Our Journey ✨</div>
-      <audio controls>
-        <source src="song4.mp3" type="audio/mpeg">
-        Your browser does not support audio playback.
-      </audio>
-    </div>
-  </div>
-
-  <button onclick="window.location.href='tselmuun.html'">🏠 Home</button>
+  <button onclick="startLetter()">Reveal the Letter ✨</button>
+  <button onclick="window.location.href='tselmuun0.5.html'">🏠 Home</button>
 
   <script>
-    function createNote() {
-      const note = document.createElement("div");
-      note.className = "note";
-      const symbols = ["🎵", "🎶", "💜"];
-      note.textContent = symbols[Math.floor(Math.random() * symbols.length)];
-      note.style.left = Math.random() * 100 + "vw";
-      note.style.fontSize = (15 + Math.random() * 25) + "px";
-      note.style.animationDuration = (4 + Math.random() * 5) + "s";
-      document.body.appendChild(note);
-      setTimeout(() => note.remove(), 6000);
+    const text = 
+`My love,
+
+Sometimes, I think life is so strange and beautiful…
+How, out of all the billions of people walking on this planet,
+out of all the roads I could've taken,
+out of all the hearts I could've crossed paths with…
+
+it was you that my heart chose.
+
+And every day I understand more and more why.
+You have this quiet softness in you.
+this soft magic,
+
+this warmth that feels like home.
+even on days when everything else feels cold.
+
+You don’t even try —
+you just exist.
+and somehow you make my soul feel safe.
+
+I love how your smile melts my entire world.
+I love the way your voice calms storms inside me I never talk about.
+I love the way you make me feel seen and understood and loved.
+
+in a way nobody else ever has.
+
+You don't know how special you are.
+You don't know how much light you carry.
+You don't know how deeply you've already changed my life.
+just by being in it.
+And maybe I'll spend a lifetime trying to show you.
+Because loving you has never felt like a decision —
+
+It felt like breathing.
+Natural.
+Easy.
+Automatic.
+Something my heart already knew how to do
+Long before my mind realized it.
+I think about our future sometimes —
+
+not in a dreamy, unrealistic way.
+but in a warm, quiet way.
+I imagine waking up next to you,
+your messy morning hair.
+your sleepy eyes.
+
+your soft voice saying "good morning."
+I imagine us cooking together,
+and haggling over who gets to stir the pot.
+you stealing bites,
+
+me feigning not to see.
+I imagine late-night talks.
+warm hugs from behind,
+your head on my chest,
+our fingers intertwined,
+
+our laughter echoing in our little home.
+I envision us traveling.
+seeing places we always dreamed of,
+getting lost in cities we don’t know,
+but never feeling lost
+because we have each other.
+
+I imagine growing old with you.
+our hair turning silver.
+our backs bending,
+our hands still holding.
+our hearts still speaking the same soft language
+
+they do right now.
+Because you…
+you're the one I'd love to go through life with.
+The quiet moments.
+The loud ones.
+The beautiful ones.
+The difficult ones.
+All of it.
+
+I want to be there for your successes and your failures.
+for your happiest days and your darkest nights.
+I wanna be somebody you can lean on without fear,
+someone who listens,
+someone who supports,
+one who stays.
+
+You don't have to be perfect with me.
+You don’t have to hide.
+You don't have to act.
+You can be soft,
+you can be scared,
+you can be tired,
+you can be you —
+
+and I'd still choose you
+every single time.
+Thank you…
+
+for being the only one who makes me feel alive. 
+For being the one who keeps me so calm. 
+For being the one person I look forward to talking to. 
+For being the person my heart returns to again and again 
+You know and understands it without any hesitation.
+
+ I love you, in ways I haven’t fully learned how to explain. 
+ I love you in ways that stretch beyond the simple “I love you.”
+  I love you to the core. with sincerity, with tenderness, with a devotion that grows quietly but fiercely. 
+  I love you just the way you are. for who you've been, and for who you're becoming. 
+  And I hope, with all my heart, that you feel even a small piece of the love.
+  I carry for you. 
+  
+  Yours forever,
+   Your dummy💌`;
+
+    function startLetter() {
+      const letter = document.getElementById("letter");
+      letter.style.opacity = 1;
+
+      let i = 0;
+      letter.textContent = "";
+
+      function type() {
+        if (i < text.length) {
+          letter.textContent += text.charAt(i);
+          i++;
+          window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+          setTimeout(type, 35);
+        }
+      }
+      type();
     }
-    setInterval(createNote, 800);
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.textContent = "💖";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (15 + Math.random() * 25) + "px";
+      heart.style.animationDuration = (4 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+
+    setInterval(createHeart, 700);
   </script>
+
 </body>
 </html>
