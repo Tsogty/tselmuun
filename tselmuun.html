@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -56,7 +57,6 @@
       margin: 15px;
       box-shadow: 0 8px 20px rgba(255, 0, 100, 0.4);
       transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-      position: relative;
       cursor: pointer;
     }
 
@@ -77,15 +77,19 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* No button runs away */
     #no-btn {
       position: absolute;
     }
 
+    /* Menu fade-in */
     #menu {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.8s ease, visibility 0.8s;
       margin-top: 50px;
+      position: relative;
+      z-index: 10; /* FIXED - always above hearts */
     }
 
     #menu.show {
@@ -93,12 +97,14 @@
       visibility: visible;
     }
 
+    /* Floating hearts */
     .heart {
       position: absolute;
       color: rgba(255, 0, 100, 0.6);
       font-size: 20px;
       animation: float 6s linear forwards;
-      pointer-events: none;
+      pointer-events: none; /* FIXED - hearts cannot block clicks */
+      z-index: 1;
     }
 
     @keyframes float {
@@ -116,6 +122,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Hii, Love ❤️</h1>
   <p>This website is just for you!</p>
@@ -127,13 +134,14 @@
     <a href="#" id="no-btn">No, thanks 😢</a>
   </div>
 
+  <!-- MENU -->
   <div id="menu">
     <h2 style="color:#ff3366; text-shadow:0 0 10px rgba(255,0,100,0.5);">Choose one, my love 💕</h2>
     <div class="buttons">
       <a href="tselmuun1.html">💌 1000 Reasons</a>
-      <a href="tselmuun2 .html">📸 Photographs</a>
+      <a href="tselmuun2.html">📸 Photographs</a>
       <a href="tselmuun3.html">Love Letter</a>
-      <a href="tselmuun4.html">🌙 Things We’d Do</a>
+      <a href="tselmuun4.html">🌸 Flowers</a>
     </div>
   </div>
 
@@ -151,19 +159,19 @@
     noBtn.addEventListener("mouseover", () => {
       const maxX = window.innerWidth - noBtn.offsetWidth;
       const maxY = window.innerHeight - noBtn.offsetHeight;
-      const randomX = Math.floor(Math.random() * maxX);
-      const randomY = Math.floor(Math.random() * maxY);
-      noBtn.style.left = randomX + "px";
-      noBtn.style.top = randomY + "px";
+      noBtn.style.left = Math.random() * maxX + "px";
+      noBtn.style.top = Math.random() * maxY + "px";
     });
 
     yesBtn.addEventListener("click", () => {
       alert("Yayyy! I love you ❤️ You made me so happy!");
       startButtons.style.display = "none";
       menu.classList.add("show");
+
       music.volume = 0.5;
       music.play().catch(() => {});
     });
+
     function createHeart() {
       const heart = document.createElement("div");
       heart.classList.add("heart");
@@ -173,9 +181,7 @@
       heart.style.animationDuration = (4 + Math.random() * 4) + "s";
       document.body.appendChild(heart);
 
-      setTimeout(() => {
-        heart.remove();
-      }, 8000);
+      setTimeout(() => heart.remove(), 8000);
     }
 
     setInterval(createHeart, 500);
