@@ -9,8 +9,7 @@
       font-family: "Comic Sans MS", cursive;
       text-align: center;
       color: #333;
-      padding: 30px;
-      overflow-x: hidden;
+      padding: 20px;
     }
 
     h1 {
@@ -20,18 +19,43 @@
       margin-bottom: 20px;
     }
 
-    h2 {
-      color: #ff66a3;
-      font-size: 28px;
-      margin-top: 40px;
-      text-shadow: 1px 1px 6px rgba(255, 102, 163, 0.2);
+    .home-button {
+      padding: 10px 20px;
+      margin-bottom: 30px;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #ff99cc, #ff66b3);
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+    .home-button:hover {
+      background: linear-gradient(135deg, #ff66b3, #ff3385);
+      transform: scale(1.05);
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .slideshow-wrapper {
+      width: 300px;
+    }
+
+    .slideshow-heading {
+      font-size: 24px;
+      color: #ff3399;
+      margin-bottom: 10px;
     }
 
     .slideshow-container {
-      width: 100%;
-      max-width: 1000px;
-      height: 1000px;
-      margin: 20px auto;
+      width: 105%;
+      height: 400px;
       border-radius: 20px;
       overflow: hidden;
       position: relative;
@@ -41,6 +65,7 @@
 
     .slide {
       display: none;
+      width: 100%;
       height: 100%;
     }
 
@@ -54,117 +79,116 @@
       margin-top: 10px;
     }
 
-    button {
-      padding: 10px 20px;
-      margin: 5px;
+    .controls button {
+      padding: 5px 12px;
+      margin: 3px;
       border: none;
-      border-radius: 25px;
+      border-radius: 15px;
       background: linear-gradient(135deg, #ff99cc, #ff66b3);
       color: white;
-      font-size: 18px;
+      font-size: 14px;
       cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: 0.3s;
     }
 
-    button:hover {
+    .controls button:hover {
       background: linear-gradient(135deg, #ff66b3, #ff3385);
-      transform: scale(1.08);
+      transform: scale(1.05);
     }
 
-    .heart {
-      position: absolute;
-      bottom: -50px;
-      color: #ff6699;
-      font-size: 20px;
-      animation: floatUp 6s linear infinite;
-      opacity: 0.7;
-    }
-
-    @keyframes floatUp {
-      from { transform: translateY(0); opacity: 0.7; }
-      to { transform: translateY(-100vh); opacity: 0; }
-    }
   </style>
 </head>
 <body>
-  <h1>💞 Our Beautiful Memories 💞</h1>
 
-  <h2>💗 1. Tselmuun 💗</h2>
-  <div class="slideshow-container" id="slideshow1">
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552626555_1133670534901251_7626644314114705304_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Fl3o7S3f2z8Q7kNvwFs3gCH&_nc_oc=AdlGtS61MDCobBrzrDHq77TgvbyixPOQnB7wB9ghrU78F9mCCTbJs0Lq2O6Eb5XAn84&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGXSUkLgMy6n6-gG7qc989bSGHZxKQr_7j047d8V7mq2A&oe=691A0ECA" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552788974_2912973365756879_7987290996410430334_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=rFHiCC7cKwwQ7kNvwEpmd2u&_nc_oc=AdkTD2ES8UcLD06u116fo6htwAKUhAQi_e8SLweOkCxfTe7xXrBLbtHWWuenf43xWoQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEwd4BdwppdQvGouVKUaqHLVQ_45P3kpvpxDBFMe1T0WA&oe=6919F9BF" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566519777_1389051892789523_8608128153712892324_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=4axxfYK7fs0Q7kNvwFP7bQh&_nc_oc=AdnMdJGm7LedNPk_950Zte2uDQrpDAw8vZcNNeWopflh-7w7OVXNC6pGayAY8DY6idA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEVUu3WVqqe4bNzKEttjQPkTFOCT5LIoIDtZgeHlptBqg&oe=691A03E5" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566561212_831216275986319_6726586733472361435_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=RG0v6-2EjxwQ7kNvwHTaCbH&_nc_oc=AdnfDAp-zw56p_xtBUy3rfiewZyzjTLMen3k-AFuknwO-q6FxMirnOdIcKPMyy31nA8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHpwm08NYD8iaEyN3tCvPAUtyZRCdq-OMuVMSvlNIFzKg&oe=691A1650" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554994153_1599020074815438_8140467981090537635_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pfP9otlNLYoQ7kNvwFpkJsZ&_nc_oc=AdmgHdwIjGyId1unxf6PLnUMjK1CdQgqDouptDOXYqlhhtBPoSxRcfkTBP75ndImi7Y&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEh5ixu_N4Kkenjvx6PynG-k0-WTLsnBMf5S_XImc5xug&oe=6919E650" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553756625_781811661436253_7635289335867636007_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=H9qXChTsLxcQ7kNvwEZbfrI&_nc_oc=AdkkftIw5BzpFmSqM-zlsA46ifH8C3xKPa26atwEFoXt9lKLGZa9j5xUJrOap_VzGbg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG5oXtI6TcdxHAg5DLlE3NYkN69-BfKxIos5NL3WaMJTw&oe=6919F9B5" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566422645_4238260813108450_8297760234030122358_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=JrWL6fPe9vgQ7kNvwHPu854&_nc_oc=AdmpQdZJKdNkras7Zj5tjNjNT2Ix96ugFQ258sLr94p9aiwXx9vU43DGWYqlOn_v2sQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG26H4IrB7f6r65GLRxqm5oepsL6TzN1MvLHIb1ettUgw&oe=691A062C" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/565504058_1854029525148493_6110712338890915782_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ugRvIjwjWCkQ7kNvwG5VL1M&_nc_oc=Adk8p6yrBAVPC4XByt9_wFR3oNey1gh_JZw4lxeSygdj-WuhI0oggi6lMmvvG0ljJK0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGW88cn3e9L2fJPT6VqGJZKlaDlBUmt0QcNmsflgeAasg&oe=6919FF2E" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554111661_1332279728438366_6421756982226233336_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=BD0DPCBq3_UQ7kNvwFZw7Rj&_nc_oc=AdngHRGi9ZcG7TU_IapSh_WFJGvcDAuC3qqX2VWmMQhmOBL2vWD2vvi9L4ZC4SeUz-4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gErNyaxirXYkQ6JNWP77R3-b0It1_pAqrXPqqRNTfR-pw&oe=691A0289" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552676928_1115372940710858_5586007837843428002_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=lEKF0JFpLvUQ7kNvwF8y1i0&_nc_oc=Adl9OKgg-WKf5wrQwbyS4FavLX0Nvz8sKqPC-cQwbclBqYShmSRJM6o3SGBpsLHiLao&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEbd3G1X8Q6cdCQikO3fsA7f3bOOLrq8N2mj-r5j0QRog&oe=691A095D" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552164553_1736607607004970_1100248294196324489_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=bu5fkHNYu3QQ7kNvwFtYIgC&_nc_oc=Adm3BwxhbbjBZ-kcFbq01X4B9WQzNTsVsokbzbPbxZuYt1cey8k0JOYkwuE1Se5YHGI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGqTaf1P-_Wr_W5NtOaHQJFRwSpEZ13Ivtva1vYejZhHw&oe=691A0E15" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552714151_1156515726382753_7104402338677610659_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=932mzDiJPogQ7kNvwF85hSA&_nc_oc=AdmP9WmBGQHBdbG0sZhbTu_6Aryb0T0gPpmTNFckv5_uwYHWD6aXF1JMXBVnJo0enEE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFYAA7eF3EvYnGeRS6dw392jzMzCnUX9CnYLt4b7FdVJw&oe=6919F56C" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551890419_1250710700430884_4594843390372396240_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kh-FF8t0Ot4Q7kNvwGglQAr&_nc_oc=AdmfgIh-nvgT-DCEe24BxtbEdFrevSlrRvUsslHeLi05I90qkDy7buWtq_D6rixNlb8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEohnZDj8prTSQpk7l2a2NUOOTDCEKlCaaaHzBQaorkCA&oe=691A058A" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552190785_827349039729076_8316692002386538803_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=6UkggYAGUikQ7kNvwEyvbd1&_nc_oc=AdnkG903giot5lyCpyHY354L8F7yGqCllWmmXobxQHnm40HnEBVeLU3qi7vM5YkXxUo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGolSh6-AI9v84ntY3ekwQb_eEkgofP9r5av-J9omCObA&oe=691A04E9" alt=""></div>
+  <button class="home-button" onclick="location.href='tselmuun0.5.html'">🏠 Home</button>
+
+  <h1>💞 Our Memories 💞</h1>
+
+  <div class="row">
+    <div class="slideshow-wrapper">
+      <div class="slideshow-heading">🌸 Tselmuunnnnnn 🌸</div>
+      <div class="slideshow-container" id="slideshow1">
+    
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597554090_1179259840392079_7941121338910572741_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=nrRAlm-l6ZAQ7kNvwE9r8Ns&_nc_oc=AdmIHHKDhHWGMMZAz05yW4xzQUa1i9aOZvmTLO--CgbmyRR4gH8Nu5-7yxvPLb0pKLk&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AE-h8-Umx1qQaC8pdf18MPr7520KgQCy5vgRZwdMLbD5g&oe=695E50D9" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597146812_1187669952770212_3277351170420298646_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=h8XG0bLb4NgQ7kNvwF2zI64&_nc_oc=Adn-QeikM1y4P2LHD-gQ8PvE3AjGuKnGsQcvDppYMbgdmJ7O4k5PP3Q7EGKmSsiMAmA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGA93CsG2HNXL8yFvRcym-Z1sMu0_RQfQjgqSUZYgfBlA&oe=695E6864" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/594956973_1364003168519854_2471419758580737306_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=_ufzFmLoiz8Q7kNvwEk5XIJ&_nc_oc=AdkWfduoyWuZMuuN6X-wu1Qzk7tWlBDMfacuQ6s_T54odDAEp--ALNmAd6KH0g_Pc8o&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGfmuuoXQxOXnmfg890FSWRidEhNsBKA-7I6yqjnDj8BQ&oe=695E7140" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597176159_2358750611242919_4645985866397617986_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=KqhL-YHQJCMQ7kNvwH16DRG&_nc_oc=Adl6OHSASj9Vf8B7K_zXuck4XzS1CEKTFyYMf02uxK4w81Dh-Yv55FmTtrJ9DLve4O8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AEW-Ihv3pNFnyc581N-JKIRw85ZWSjiOuKxjJgxTVKBQQ&oe=695E6D65" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/592358174_25542874172012628_4633359675912390863_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=hqITqZQIZ1QQ7kNvwHwLiBh&_nc_oc=AdmWhVRZ9bp0cgb8PtbLY0qzGL1Jim3iGTX6eOEcVnwIM6c5H244c_ibns8kigqnxSY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFRvlyWn13cbaWeaESodrb-trZA7eEYX9UM7K1mHda4zA&oe=695E7430" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/594981398_902458098924599_8934507495280173284_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aIluCsQXcq4Q7kNvwHPR2FU&_nc_oc=AdlikfN_t17R5I29qiyRTlj8FBC8hBcS8OxbKDcuQzAidWKIDGsybznP0rb-T7u6yQg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AEljPCtV7Hhh7g4Y0KU05tiLzkuTrPxBD8Ni6KnP__ZYA&oe=695E5A35" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/592224685_1173579387709561_7493275223337536035_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=iKWYR3HLEB0Q7kNvwGI3n0u&_nc_oc=AdlfBOyzv9LqyzucANzS9GDh-1_UGesoFwJzdsLu9K_p6_avYZ8fRZVhWUtUxF7MFIw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGHDJcG-jAGSg9LaTLpgQ8vedeXNanLpY2niy8sOCbKJw&oe=695E5C5D" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/593441344_740340385143379_8570379089055971543_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=lqJMx-eZvV0Q7kNvwFyjPKx&_nc_oc=AdmEfehN-f8YTFg1uRZA0OQYo1d9_RsgqZnOTnZJ0iwsPaHuscJ3CvixEDERBkKvGbw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHeP-XZpbEYNRyppcZWfJKGGl3Gevl1Lq66c3S5Fh4tQw&oe=695E75FC" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597753447_793633200370909_5584507045538644065_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=uoMNeQU5d0QQ7kNvwF_MMqU&_nc_oc=AdmfOcpqBQETevPEDnB44k0S0vS-fUk_HvsGECimG51B8KNTtbaYXDN93AyHeobEHyw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHrsFO5CkREytyyet1ynBjt3udwksflTOMfGNuvRlhKfw&oe=695E6443" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/592895315_1674408907101499_3104536890907742581_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=-zaTeYavIWwQ7kNvwGd_5lK&_nc_oc=AdlQ4upYqbf17VFL45PcIfn0zIoi8GlTp-hPeoAsaLozY7GYK6DWfML4-Sux6HOvP6k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGZ4o0qaIQNQSUJV4QMuVMGYlfHWjRoOLaRj6JCVMY7Og&oe=695E6174" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597167763_646695318434119_5300592213038428140_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=jj23nPgGym4Q7kNvwH_vsxS&_nc_oc=Adl1Z_JNuS2n41d4hPFSEuF3WJrwZJVrLrI0-hTgVhn7m741S0e5T1vi5CJcFKI6qu0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGHDL3JvMhS6XHFt8BgCstm2890OmsQNYs6AZWFx7XRsQ&oe=695E751A" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/592142495_1515144133075233_7744594408064756644_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Chzu8M4TyesQ7kNvwHfLt2u&_nc_oc=AdmiV-asM6ck36JUz3wGnZ1ajnTtcHkqzB6v5_2JuSNi6XH1FkgXWHHdaLfk0xL-1v0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AG8HtoDziMQRENyKMbsZdFxyK5AhVYRyPWOrYsTEmZhPg&oe=695E61E1" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597401200_3082619681944893_3215446655081515070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=D4CeiESkKH8Q7kNvwHRgUYy&_nc_oc=AdkJFKQqs2FTltj0y83mIoiy1uSFk6h1Yj9arXGUGuAckg8UcBBYQ5YaHtvYVLXp0yQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFfAyQI6R8tJxq8wJ2T9C4nELLxnV0iBkv5WNZyFWafvg&oe=695E71F0" alt=""></div>
+      <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552788974_2912973365756879_7987290996410430334_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=9h_uNz8sO-IQ7kNvwE1gTL5&_nc_oc=AdmftGB7VUdkBCTWHw_CQBRFL8WPcakjUBH6Bh6po39HaPV05nFkMKnJGQylqHg8Bdk&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AEMsPmdzvRzC-FdhTCbB51aAsBfnHY1P91pOobdCxs--A&oe=695E87BF" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552095426_1533541014330280_5586501421516111199_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=4M_mMEAi4KMQ7kNvwGmHpay&_nc_oc=AdmTMzG9x1nzmfAlIMixMyHKa3lIwzY98i6GynX_VHB6T-dK1pICvarB1CBVOw7brkc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHbcXFXmRCNKyqhCMBimJAQy51QCxg2IaC9FGlYxgCWFw&oe=695E63A4" alt=""></div>
+      <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552676928_1115372940710858_5586007837843428002_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=SGftahC1LoMQ7kNvwE1oqM3&_nc_oc=AdksnV6CV78n1__JtBaL5d3Q8p-srvSD6nOGYq_S1LjX4v_f8TzyNb0_myzUD8yFjfc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AEORfHzO7A8x9UplvNAo0mwNBIB8khPqhbSLXhNJ0HSUw&oe=695E5F1D" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597145379_1202864801797283_4827219965093476048_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8rP6eiwLB8YQ7kNvwFvF7KJ&_nc_oc=AdnxACFsUyG6I69vu7FSLEVU9XugU0H0a57qGHSkJ9uRNFD8ZY9pMCDN3vuTjXXLijg&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFYZLM0pnJyxw3xCPNTZwabXO_j0ffZNZJVHWqnxpwQdg&oe=695E660E" alt=""></div>
+   <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/595198431_1393991135607465_879149591532537456_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VCgwucmtXW0Q7kNvwENE8lo&_nc_oc=AdlS0pqt6dAEZ1cvbBHT_mBPnzhbn3Pn0rZ-iNwK8elaLrL3V4pwhcIqc8OpN8XEH2s&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGhF1256QqUcifU-oAJ58UjXSlvo7AdpsHxd3PaKLyuWw&oe=695E6F7D" alt=""></div>
+   
   </div>
   <div class="controls">
-    <button onclick="prevSlide(1)">⏮ Prev</button>
-    <button onclick="toggleSlideshow(1)">▶️/⏸</button>
-    <button onclick="nextSlide(1)">Next ⏭</button>
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(1)">⏮ Prev</button>
+        <button onclick="nextSlide(1)">Next ⏭</button>
+      </div>
+    </div>
+
+    <div class="slideshow-wrapper">
+    <div class="slideshow-heading">🍓 Together Forever!!!!! 🍓</div>
+    <div class="slideshow-container" id="slideshow2">
+    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552640626_1330097295223010_3293159605404928263_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=mpJAzHFA7fsQ7kNvwGM6npP&_nc_oc=AdmlcOufyn90WZ8LKHRCN8wHF_beSB_Y7qxBV1SXBZ9SXuEWLLgvkUhTfUN4oTw8bcY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGF5hvDIK1o7TIknaoVirTB3EypRqfeIyqyfBbVr9Eabw&oe=695E8449" alt=""></div>
+        <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551521748_1826905948179562_2268552037076513664_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ZgmFv_DlbqIQ7kNvwEbBRTU&_nc_oc=AdmclOoa45s50ODustWJ9V-KrNPe_UkCHEoR4SDIqvKeSvq7KMtVceivwOLrv8t8AjU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGzrgVC_VF6ksTkdv8-2Wlx5QHwvZ7KcslNkDWYH9gFEw&oe=695E73D4" alt=""></div>
+            <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552043056_1531397501647166_4396807686803253910_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_ohc=FRNLKVeSRxMQ7kNvwEkGODO&_nc_oc=Adl3_-0zakC6HjJpwN9NYI4fpORSaSsRvOiOr7r7l0oRLj9tMCPyoqYWfvlim6M1YXs&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHFgTx3FEdxTPQUjsGBLO6tFUoybRNRxkwprYV3i4wwwg&oe=695E79F9" alt=""></div>
+                <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552533887_1989393958297354_9103929415140615619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=-qK_NtJO0jwQ7kNvwHedEJG&_nc_oc=Adlvgq1Rminkf4hR7if4JIV3XyJGN1pbYhPmSLSiZNx5VZz7V5iYYk2NXiQGcI5i3vo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGgZXTDsQusjoejqhPY3mTQQ0OG23dyyS8V1Tncc-Bcug&oe=695E551E" alt=""></div>
+                    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552943478_1105215251798624_4489885506575021123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=E5mgzk6t4bIQ7kNvwGBSqen&_nc_oc=AdlOtgUStwLgUWkeYBwoJIkcxnLyDO-JHoWttAWPtUtfLE1CYe2OQOTPe8_LTyZk5do&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGecJDhPi8JzI65xJ7NFaB5QwHvXkSvHRFhZLgZrYHIxw&oe=695E65BB" alt=""></div>
+                        <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566429871_817114860896334_841873122831179152_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VoTRqPK2UCwQ7kNvwEBsQmX&_nc_oc=Adm5G5MZhMoBhYCO9FDrBLeEuNIQM-vnVoTrSMTDoyimkONmYl6JPVh-RPrNPGE7H4E&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AE98tS2OP-gRisU7N2Y7DkbUXR91sPQ64fnhMjuQOGi1A&oe=695E6E02" alt=""></div>
+                            <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566478622_1437725657530653_7953944202129929668_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=-t4rOv5m30AQ7kNvwHkK3dd&_nc_oc=AdlF1KwTIfK4Izwkrpn3A-StAEGYAtWo5rGaSndVoMWx4fKCkk1jy2N5EywAn-PvLKE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFZoxsgry6OCFGGlW7vozvMc0wRww6UFJ8tSPgVedqHkw&oe=695E83D3" alt=""></div>
+                                <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566398501_1197429818908330_3312246323638314004_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=281SS7MEZgAQ7kNvwFiluRN&_nc_oc=Adn_gdtksQKJT8Ror6j6zPgPuoxlaJJw3Hr12WOvx7IzirxkjemdG15_bQuA4A8iGpQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AH_yf_SOQ1sSvI8lLrLb4spbJB06zK4KJDLiHvG9tjUMg&oe=695E5B14" alt=""></div>
+                                    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/565032415_1642549373385986_7762477018313431714_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=UQ1l5tWFFQ4Q7kNvwGfXo1R&_nc_oc=AdmU6jT-EUZXclBzJgWIQajax96pT48M7eouDnZyUPyjnL2Upp_p6UFUABVrKo50aBw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHuQhnqZKxQPvQg_y2kdZFO4hA_du-CXB4L8Yz4nmkiQw&oe=695E538E" alt=""></div>
+                                        <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/555608986_842151011711956_3885101310177862156_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=l4ClQh7T0ncQ7kNvwGvYOg_&_nc_oc=Adk0nn_DLEJZCTm1he0F4xjokgbwSvvhAHrpvgqrnLUUNvk8acshlTIUZBe07ca-MEQ&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AF0l_8rf2n3FaqJ6f14hwmqs2AWHGNczIoXa3iBJi7vow&oe=695E725A" alt=""></div>
+                                            <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/582482190_1504260597460043_68690188231740216_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=WtAMA1V7ZHsQ7kNvwE7FODi&_nc_oc=AdmldYrMVS5OL0fOt3YOjsjCAtLolju2F9YnmLGOjLtU8PEo0wdHVKjPmtLYk7Y8ttA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGq5itgX0rxhA5XqAx4iGi6gvm0J2bjbp6LKyiQDPuPug&oe=695E7721" alt=""></div>
+                                                <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/582159566_1183359000399577_5052622914463117285_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=39LH1WcPDrcQ7kNvwHhpN51&_nc_oc=AdkjtRGf9zBYmwR91wA-Hy1SM0_ZZhaqCZ6067ZO0mIUGvZ3U32wwrx0z_iOE2cWu-c&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGQiF8kYazI784gIGuOhBJAIHstNWLxkExSbn322uGKSQ&oe=695E5E5D" alt=""></div>
+                                                    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/582234906_2209832442830313_3682876384750779629_n.png?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=DxtdELu91HMQ7kNvwEgOMG2&_nc_oc=AdlCY-r0TJKjZTnMBeBFaDokcW3L1vnJ3GeE0JpQN-7MTcScrIW72QJFIKnwg7zgoYo&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHKEIBP2hrcUNQx1ggkMzwg_pBJtW41nTK5Zla9ftuluw&oe=695E5DEB" alt=""></div>
+
+
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(2)">⏮ Prev</button>
+        <button onclick="nextSlide(2)">Next ⏭</button>
+      </div>
+    </div>
+
+    <div class="slideshow-wrapper">
+      <div class="slideshow-heading">💖 Ireeduii 💖</div>
+      <div class="slideshow-container" id="slideshow3">
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554813577_1140682131341244_5066470763509352986_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=O3tEtd62VoYQ7kNvwHk1EjC&_nc_oc=AdlvlLhMvev5c2vS8vgTpk2qpy9BFCiFiBv4QE4YHzPadWipL7uUKgjyXSFjCi-XPzI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AEIdPY02843T27djx7k_8tIyXtZpU14iiXLeQQ04MM8xg&oe=695E71AC" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552447138_1994341144736149_5194530607319951358_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Hq_AIBP9JPgQ7kNvwEibzgi&_nc_oc=Adkh17hUtE3dgZModrmY3Z8CVClqBHdkFLE_9nZAhTgMsoL6BFpsk1KWH2XxAjonKy0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFfX0HFMQ2G4QeH9J5CZjKNKQQfCJtv7q-XaR2hr6xASA&oe=695E75B7" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552427642_800483342470834_768807288175821528_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=tx0tljE3xqwQ7kNvwHT4b5I&_nc_oc=Adm1Esri2f0JZGU-5-mjjaOWJqgbUL2Rg5hUPRzmlEq48cvBjpOY-Iosx_s2vxKO_oY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGlgP5XfKT5oQmGPprPLUrke1kQeLxo2QwMXI9B-GKMQw&oe=695E66E6" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552732422_753567444343743_5159681768785555116_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=pKW9YatraPEQ7kNvwF_Mn1a&_nc_oc=Adksp_MOPUfQzmNDhnZnJNGmvdlMGTxyPGa8-uoinK5I_DIn54Yow8jTI4H8Bg-h_XI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGwgdtZA1c4wqYWLiraD0wMvGjHeu-iqgREvGsrFBKaSw&oe=695E6A38" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552486759_1009766127883437_6962650321350315641_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=eaG0J9ed1qoQ7kNvwFQIUC9&_nc_oc=AdmaZn1oewKaRCkw3tXwsXJp1O1FFSD1fw-7fQkUAMYcnapzzG5WUaEEHqEni9TdK2I&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGVSuOEkpBXi4-i0a1KiHaCzfpu2HaH7S3EMHGRyusqPg&oe=695E5CCA" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552646816_1146001840737227_2424688650273987125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=zpAlLo-ZiWMQ7kNvwGlfguY&_nc_oc=AdnRkVBmi8pAPvdnxZb9fPDJfeWarrgzyQr85DUVBZW6LQ4NFaq5V_8Q0ZqxM3OC4xc&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFoUr2FaQV8FUrUYa1oZ_OsGf9dR8nmOM9LIIvhYSMlEQ&oe=695E8476" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552889306_801196645644649_4207363879347710441_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=botyn6D9USYQ7kNvwHuJ3Ot&_nc_oc=AdmlUP5gcwj41WYBfZNhmTq9zPrZzXNL1napeY0zFhsvC_P_IEQjAq0E9JpxWZmiUjs&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGvPpTf0Pv-nFY3Pqf8iHK69Dt1-MMDSwoZgZNGVvxaVA&oe=695E55DE" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552719766_790978430769590_3653066779121054721_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8-nBYLUAYbEQ7kNvwGJ9CUE&_nc_oc=AdnUuYBrUXbKq8Vf7FQjnVDXhzv_HeG73aXv25Y7T_kwTVYiJNgDyhhQumeR7K3-v8A&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AHt1ZyD6tkCkFX9b7Clwfu11JQgigg0FGQwlTumr0g0MA&oe=695E687F" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552543946_1352830886844537_3572879349122593783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=nttx3KdLgK4Q7kNvwFqFoTM&_nc_oc=AdnVJCJwT4Ajvkd1DhYD72KK4MUFKCuv_xTkFVT_lpsLJAdEbiPg4hRtOQ8JHHUme4o&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFAnHEtAXgskGhKVtzDI23ALAhCv5xmX2AVDhXGuN2I1A&oe=695E87DE" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/597133748_2261219581031820_4913223276583757366_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=9f807c&_nc_ohc=TMfxE2RQbXIQ7kNvwExRJz3&_nc_oc=AdkDPog8UUKe7RCoTNFJNT-MxIksFFcJGfgTqb4UUrjUWmmQXKBU3IqG3ChEkFeRPVs&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AGvswyOLxzxqJBiBcp97DF9WhLWpS435WEBhKtQpmZ7uw&oe=695E8883" alt=""></div>
+     <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/592160785_1413773617085030_2767846362479653816_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=dnJACRJTYCUQ7kNvwHacFUu&_nc_oc=AdkMPsjpNFJk4YTQrc2HewpLyykw28HrarSabPafAVsBv0EEURhL_rS_VKKnwOG3LaU&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD4AFfpPBTh8djjYl8mx0XrE-BYfO6RYB4O5BwSvMYVyt-JQ&oe=695E7B1A" alt=""></div>
+      </div>
+      <div class="controls">
+        <button onclick="prevSlide(3)">⏮ Prev</button>
+        <button onclick="nextSlide(3)">Next ⏭</button>
+      </div>
+    </div>
   </div>
-
-  <h2>💞 2.  Together 💞</h2>
-  <div class="slideshow-container" id="slideshow2">
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552640626_1330097295223010_3293159605404928263_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=Rpg_dAw7O74Q7kNvwENp81-&_nc_oc=Adkki6rjeNgG2p0F_XxqACwhkU-CHG6v3_128G347ftsnmYhr2rTU544lo_pgp7hk6o&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEChw-TOlQchlwOFkbegXcQIxiVAxJsozQniwrCcjdU2g&oe=6919F649" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552883633_1325171249017904_5728727890075696261_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=aHboTZ_sJkEQ7kNvwEcXg1G&_nc_oc=AdnjxvseEd6ni4NhW607AIr9FaF1ANdzoYFxehq8hqw50mwRuShgBWNSufgKTuAwCYY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGk9pDq13l18H-rbEoBHWudh1-fH2OxXT2KahFwlSC42g&oe=691A0293" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552024958_776983651719726_6742335866272362821_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=QJT7oPIOHLAQ7kNvwHRrWA8&_nc_oc=AdnI1tXvCFox5jgA4VgwIvm9IuKlcu--LtxXE4ADlSHbf4T3trEMmmSz6yBiL0nblA0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG9-Lm0bIB9N4b_WD1cJe4c5crXFvh2qVLqyGEx0dQfeg&oe=691A01DE" alt=""></div>\
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551521748_1826905948179562_2268552037076513664_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=fLRt-pnVWOoQ7kNvwHD34ki&_nc_oc=AdkegdTgGt5Jbkc-OID30cb4H8t3utKpGhDhJjA5MWba4XPWNEV0RQLsxscSDUsEmfE&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gF75Z08G_xla8n0KC5RcI62gvaYCYIgFWbfGhQ5saDzTA&oe=6919E5D4" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566614851_1148557997241579_3712008741050514557_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=im9z24MXJbcQ7kNvwEiiS2x&_nc_oc=AdnnuaHtR7Y65vwz-RYFte0F50ILCSCC-lESrfr3zAxWcbm3LG78FSemV6PFM9f2dl0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGtaEIysD8REDtBEWTsdFLNnCynmI_auFS3RzplLrUDgA&oe=6919FFB2" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553270529_1330057798567918_2549239488541801134_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=2ZrCL6rV63UQ7kNvwGbtAWY&_nc_oc=Adl_Xttgutsh-5egqG46E0vJor1HO-hy2hgzs7ABjZYZKflAOUwbqeJDO-ApzjVq0ZA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFDgntyjb8N6_XLlisxTEfh6_CQZWmPP9rAJ4F657uOag&oe=6919F6EA" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552943478_1105215251798624_4489885506575021123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=4H8vn4AqMMYQ7kNvwGwISzM&_nc_oc=AdmtZvvFkn7MLAFWAxe8f4uX41BpBoo51a60oPOE5ObTG3YsO_7UXQVndg5bZNZt61c&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gE4MVInUBBpGUW4I7Dgix5TBVDPtlSanF1XwIRGtL_j8w&oe=691A0FFB" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552533887_1989393958297354_9103929415140615619_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=DBx9mnnovi4Q7kNvwGoB6Ff&_nc_oc=AdnzqIV7YriiBO0gIMxlaNM0aoDClMPDBLSSw4KciUrbilCH_eWxCcTU5fLpIjoON7s&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHAfwNc3rCUn4LYy5Oo_Tk8-pOnvCwagon3V0WyM9b8JQ&oe=6919FF5E" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/566560271_1153080983454081_6051225469379728992_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=9f807c&_nc_ohc=5dDSGoqYrgwQ7kNvwF8i31a&_nc_oc=Adn-vwhJpYwzn-KLijaOcrOio7-OJIdm1scGgb7VqynU-ZH0iRLuqYHQzXXHsdo_au4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEuymD34Q8hee_YJmdgaFXKrT6L-24RZ-M2VNttFX5gBA&oe=691A0C16" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551868553_1565816911065348_3111001640974475706_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_ohc=uNp4bR3IjNgQ7kNvwEuDXgj&_nc_oc=AdnUAopREy42X2HlT6Jj7J6Bf4fvlLbPDZKi8bEW7sFz1z51NYFOfXfLNzpTz8SbUfY&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEoHeSjMC1Khyzsi5sgmxPTf7aQfcLgTb5oQNXq_xfgeA&oe=691A0609" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/555608986_842151011711956_3885101310177862156_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=mGufALGZWiYQ7kNvwENWAiM&_nc_oc=AdlY5-tRkwXXkfc7N3j1Zx_32dzzWLCntrT2_PyURvkHKVsbykQ8584zJeyiw4oSTjQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gH0jPeBw7buZplYB8Wiy0UL5tODWnP8m_OMEooM7GISMA&oe=691A1C9A" alt=""></div>
-
-
-  </div>
-  <div class="controls">
-    <button onclick="prevSlide(2)">⏮ Prev</button>
-    <button onclick="toggleSlideshow(2)">▶️/⏸</button>
-    <button onclick="nextSlide(2)">Next ⏭</button>
-  </div>
-
-  <h2>💘 3. Ireedui  💘</h2>
-  <div class="slideshow-container" id="slideshow3">
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552447138_1994341144736149_5194530607319951358_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kXMaXBjND2AQ7kNvwGfJBUC&_nc_oc=AdmJYRQbz357INlG_DCsQsRIRe9YWw2lMiFxQ9p5gauEI1_02l7EiQN9REIKhL6xRSw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHTD5A44ja3xWWVYOtIiyelwS4ABNe37d2VZx0oUrgn6A&oe=6919E7B7" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552427642_800483342470834_768807288175821528_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0qdQb0xn6V0Q7kNvwGeqwQV&_nc_oc=AdmnBZERZ2xXAzm2sjRCAgIEv6FCSyrCw_H3bonr1pnoHCvbXW0hkl7bUCL7EbkE1ns&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFDL1RU30kIN7t4TP6tOj67Uf0OSrMkpG2zd79YO-ODUg&oe=691A1126" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552585435_1841640216788850_3965982205370596091_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=XdYKCXE2VpEQ7kNvwG8fi5N&_nc_oc=Admydhostz_koVQ_1csTzFMljwiPtAaQmKXdP7cte95wZzxrd2MjQVHEnii1Xp9vzeI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gEtyzavspgLT8z9flkQxtQCPJgODSTGei3zSesePOxoCw&oe=691A1130" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552543946_1352830886844537_3572879349122593783_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=1PM3ZL84KSIQ7kNvwFTLBho&_nc_oc=AdmON7FgKTty5SFKFNJxgK1uxXO4ZcOsnxTq5SJfy2yv0MFSKZSuRheOkZ46kYvyXWw&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFhHxh6xaSffS1wNy0opIWSmbRKwhwbxwNMKClPnRePjQ&oe=6919F9DE" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552889306_801196645644649_4207363879347710441_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7LBegLbnB64Q7kNvwEEY7hn&_nc_oc=AdnoXQwGY0UPj9j4O8cEdZ0QirgQGdmk4k2uIKzlNi_3xjfvQVnOBfQmcYsLZgUiSM8&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gGYnccclJOT3DQupwgi0KDI7VPovT6RCZhQuec6BR64Cw&oe=691A001E" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552719766_790978430769590_3653066779121054721_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=VPLlnhgyCLoQ7kNvwFSgbbG&_nc_oc=Adml-EIgtOLzKpYgrZ7PhBrWlkJu-MraMy4ib0gmsdWXb2ZlLKXeSX73PGOsKZkTzfI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFIi0LRhSUvXIUVog3NhREkiADCQjqM63PXEr6iLieSSw&oe=691A12BF" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/553732536_806878455175275_463495721861096051_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=keAk0bI9WB0Q7kNvwHvwLSz&_nc_oc=AdnC6Ld3cREeE0edABYscwz9bNePDPpDNPvXEIvwQoOd7trQuDV4W6d5wsRlZHOgE4k&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFxs4ZKI4WXlVI8dHkKxWc_mFVBCnJ8J0Vx_mx_9Vf_yA&oe=6919F8DF" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/551796189_1419906702444659_1013564178778342755_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=-MDeL_2tguIQ7kNvwH3UdeQ&_nc_oc=AdnJFb___9LXLViuXySnsVv2U4WfI7tCaAlVU2zzFmcUJ-9_HxUukWkeDTr1XdnVHa4&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFoM51AzfTxkCnfAk4RSFOf0f-salD1rV9zAewVop-bZA&oe=6919E0AC" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554813577_1140682131341244_5066470763509352986_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=6Jg3NwVFNYoQ7kNvwGjr_xI&_nc_oc=AdmrH2QRG0tkzbFO47nM0SI-tImuNYVmPVn4RcBx9Ts6RV1qvwdqZ88eClPj9VGhAac&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG68lQz0EnX-d6LNYa17ggahq61zcaQAEQ6XjyjetfC5w&oe=6919E3AC" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/554219824_1231730782308689_2367801228185575352_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_ohc=ZVggK38F9kMQ7kNvwH0pQOq&_nc_oc=AdmpPCA6sqpcP3ytvsAx_tZtCYiANyUpSy5bbkE6v1f0HDQLfVjuPRZrDl4jcrkznwA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gG6Rwq8qDQfwUs8F8EIdKP861LZGMWP2u9TIKGwwsi-cA&oe=691A04DF" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552732422_753567444343743_5159681768785555116_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=7E53kSehUZMQ7kNvwFv8doA&_nc_oc=AdnQk3HNyy7vY9SkGcMeoc0Amb7PC53Buqsrt7dVBEyyXaGKtjbrgbW_GNlTRQAZfcA&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gH-FwkbzLE6PNO0lBW8UZoD8XedVFUSNk2JPL41xQgFfQ&oe=691A1478" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552646816_1146001840737227_2424688650273987125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=bME-BDdeLbMQ7kNvwFW0vE2&_nc_oc=AdlCclK44YcOnOlrl2cW0bIcn37Ct7JXJQ4qcFrksQPLdFh8oMY9Tv17aHWG7KV9zQI&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gFJdCxynTFmurafiTP-GcGMzkuv7g4MlXEZwRZ5pWBMAw&oe=6919F676" alt=""></div>
-    <div class="slide"><img src="https://scontent.fuln8-1.fna.fbcdn.net/v/t1.15752-9/552916574_2780952552107987_5060286844175490713_n.jpg?stp=dst-jpg_s640x640_tt6&_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=iktwPKn6yfkQ7kNvwG6iFHO&_nc_oc=Adk9OrnPNRYuj6iNvG9SCEcPLpiaG_I3x30-oQe2QsiiOaFMClnM0iVA_S2vcmRT0NQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fuln8-1.fna&oh=03_Q7cD3gHcg7XXSLjWSDN64-cIwUx0gmofOWH1LvOuU4_k4mudbA&oe=691A1217" alt=""></div>
-
-  </div>
-  <div class="controls">
-    <button onclick="prevSlide(3)">⏮ Prev</button>
-    <button onclick="toggleSlideshow(3)">▶️/⏸</button>
-    <button onclick="nextSlide(3)">Next ⏭</button>
-  </div>
-  <button onclick="window.location.href='tselmuun0.5.html'">🏠 Home</button>
-
 
   <script>
     let slideshows = {
-      1: { index: 0, timer: null },
-      2: { index: 0, timer: null },
-      3: { index: 0, timer: null },
+      1: { index: 0 },
+      2: { index: 0 },
+      3: { index: 0 },
     };
 
     function showSlide(n, id) {
@@ -176,40 +200,19 @@
 
     function nextSlide(id) {
       const s = slideshows[id];
-      s.index = (s.index + 1) % document.getElementById("slideshow" + id).getElementsByClassName("slide").length;
+      const container = document.getElementById("slideshow" + id);
+      const slides = container.getElementsByClassName("slide");
+      s.index = (s.index + 1) % slides.length;
       showSlide(s.index, id);
     }
 
     function prevSlide(id) {
       const s = slideshows[id];
-      const slides = document.getElementById("slideshow" + id).getElementsByClassName("slide");
+      const container = document.getElementById("slideshow" + id);
+      const slides = container.getElementsByClassName("slide");
       s.index = (s.index - 1 + slides.length) % slides.length;
       showSlide(s.index, id);
     }
-
-    function toggleSlideshow(id) {
-      const s = slideshows[id];
-      if (s.timer) {
-        clearInterval(s.timer);
-        s.timer = null;
-        alert(`Slideshow ${id} paused 💔`);
-      } else {
-        s.timer = setInterval(() => nextSlide(id), 3000);
-        alert(`Slideshow ${id} started 💕`);
-      }
-    }
-
-    function createHeart() {
-      const heart = document.createElement("div");
-      heart.className = "heart";
-      heart.textContent = "💖";
-      heart.style.left = Math.random() * 100 + "vw";
-      heart.style.fontSize = (15 + Math.random() * 25) + "px";
-      heart.style.animationDuration = (4 + Math.random() * 5) + "s";
-      document.body.appendChild(heart);
-      setTimeout(() => heart.remove(), 6000);
-    }
-    setInterval(createHeart, 700);
 
     showSlide(0, 1);
     showSlide(0, 2);
@@ -217,8 +220,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
