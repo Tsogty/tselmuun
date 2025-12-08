@@ -15,29 +15,28 @@
       color: #333;
       overflow: hidden;
       position: relative;
-      animation: gradientBG 12s ease infinite;
     }
 
-
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
     h1 {
       font-size: 54px;
       color: #ff3366;
       margin-bottom: 20px;
+      animation: pulse 1.5s infinite, fadeIn 2s ease;
       text-shadow: 0 0 12px rgba(255, 50, 100, 0.6);
     }
 
     p {
       font-size: 20px;
       margin: 10px 0;
-
+      animation: fadeIn 2s ease;
     }
 
-    .buttons {
-      margin-top: 40px;
-      position: relative;
-
-    }
 
     a, button {
       display: inline-block;
@@ -50,18 +49,24 @@
       border-radius: 30px;
       margin: 15px;
       box-shadow: 0 8px 20px rgba(255, 0, 100, 0.4);
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      position: relative;
+      cursor: pointer;
     }
 
-\
-
-
-    #menu {
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.8s ease, visibility 0.8s;
-      margin-top: 50px;
+    #menu.show {
+      opacity: 1;
+      visibility: visible;
     }
-    
+
+    .heart {
+      position: absolute;
+      color: rgba(255, 0, 100, 0.6);
+      font-size: 20px;
+      animation: float 6s linear forwards;
+      pointer-events: none;
+    }
+
   </style>
 </head>
 <body>
@@ -71,14 +76,34 @@
   <p>Do you want to experience the surprise I made for you?</p>
 
 
+
   <div id="menu">
     <h2 style="color:#ff3366; text-shadow:0 0 10px rgba(255,0,100,0.5);">Choose one, my love 💕</h2>
     <div class="buttons">
-      <a href="tselmuun1.html">💌 Love Letter</a>
+      <a href="tselmuun1.html">💌 1000 Reasons</a>
       <a href="tselmuun2.html">📸 Photographs</a>
-      <a href="songs.html">🎶 Our Songs</a>
+      <a href="tselmuun3.html">Love Letter</a>
       <a href="tselmuun4.html">🌙 Things We’d Do</a>
     </div>
   </div>
+
+  <script>
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = 15 + Math.random() * 30 + "px";
+      heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 8000);
+    }
+
+    setInterval(createHeart, 500);
+  </script>
 </body>
 </html>
