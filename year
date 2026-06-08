@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1st Anniversary, My Love ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Quicksand:wght@500;700&display=swap');
+
+        body {
+            background-color: #fff0f3;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Ambient glowing background elements */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: #ffccd5;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+            opacity: 0.6;
+        }
+        body::before { top: 10%; left: 10%; }
+        body::after { bottom: 10%; right: 10%; }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+            max-width: 450px;
+            width: 90%;
+            position: relative;
+            border: 2px solid #ffb3c6;
+            z-index: 10;
+            transition: all 0.5s ease-in-out;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #5c5457;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Polaroid Photo Styling */
+        .polaroid {
+            background: white;
+            padding: 15px 15px 35px 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+            border: 1px solid #eee;
+            transform: rotate(-3deg);
+            margin: 20px auto;
+            max-width: 200px;
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        .polaroid img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .polaroid .caption {
+            font-family: 'Caveat', cursive;
+            font-size: 22px;
+            color: #ff4d6d;
+            margin-top: 10px;
+        }
+
+        /* Cute Anniversary Badge */
+        .milestone-tag {
+            background-color: #ffe5ec;
+            color: #ff4d6d;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 14px;
+            display: inline-block;
+            font-weight: 700;
+            margin-bottom: 15px;
+            border: 1px solid #ffccd5;
+        }
+
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            padding: 14px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 6px 15px rgba(255, 77, 109, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.5);
+            background-color: #ff758f;
+        }
+
+        .hidden-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            pointer-events: none;
+            animation: floatUp 4s linear forwards;
+            z-index: 2;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="envelopeContainer">
+        <div class="milestone-tag">365 Days of Us ✨</div>
+        <h1>Happy 1st Anniversary, Love</h1>
+        
+        <div class="polaroid">
+            <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=500" alt="Us">
+            <div class="caption">Our First Year ❤️</div>
+        </div>
+
+        <p>I made a little something to remind you of how much you mean to me.</p>
+        <button onclick="openLetter()">Open My Heart</button>
+    </div>
+
+    <div class="container hidden-content" id="letterContainer">
+        <div class="milestone-tag">Our 1 Year Anniversary 💌</div>
+        <h1>To My Whole World,</h1>
+        <hr style="border: 0; height: 1px; background: #ffccd5; margin: 20px 0;">
+        
+        <p><strong>Dear Tselmuun,</strong></p>
+        <p>
+            I can’t believe we have been dating for more than a year now. Honestly it’s kinda surprising  that someone could stand me for this long. This letter is meant for you to see how much I’m grateful and appreciative of you. 
+        </p>
+        <p>
+            You’ve seen me cry, get emotional, furious and upset. But you still chose to be with me. 
+        </p>
+        <p>
+           I wonder why? Is it all the gifts? Is it all the moments we spend together with? Is it my amazing jokes that make you laugh the hardest? Is it my fabulous brown skin? Or is it my love for you?
+        </p>
+        <p>You see I’ve never tried so hard to impress someone, other than you. Every time when I get praised or when I achieve something you smile the brightest. Your smile is everything to me, seeing you smile because of something i have done is the greatest feeling I have felt in a long time. 
+</p>
+        <p>I can confidently say you are “ The Love of my Life”. As Frank Ocean said before “Someone loves everything you hate about yourself” and I’m so sure that someone in your life is me. In fact there’s no such being that could love you like i do. </p>
+        <p>I hope you understand how much you mean to me. This past year has been difficult for both of us. You were the first IB student, and I was the prodigy student that people expected a lot from. We were both pressured, scared of losing their trust by not achieving something they expected of us. Despite that I still didn’t let that be the reason to spend less time with you. I know in some cases i should’ve just did my homework or schoolwork other than meeting with you but I will never do that. To me you are more important than my studies. </p>
+        <p>You are the reason I’ve felt true happiness.</p>
+        <p>You are the reason I didn’t feel alone.</p>
+        <p>You are the reason I’m happy to be alive. </p>
+        <p>You are the reason I’m trying so hard to achieve my dreams. 
+</p>
+        <p>Tselmuune I know how much you changed my life . And I know I’m not the best person you could date with, but hey at least I’m trying right? Everything I have done for you is all because of my love for you. To me you deserve the world and I will try my hardest to give you the life you deserve to live. </p>
+        <p>Am I making you happy? Am I worth your time? These thoughts run through my mind all day. In the end I’m absolutely worth your attention hehe. 
+</p>
+        <p>The day we met was the day our lives changed forever. I never knew falling in love was this easy. You’ve said one word and that made my heart race, is it that easy to fall in love? Ever since that day there wasn’t a day I didn’t think about you. Every time when we passed each other the feeling kept growing. That’s how I knew I had a huge crush on you. </p>
+        <p>The first time I took you to your home was the first time we held hands, and hugged. I still remember the feeling I had when I hugged you. I can’t believe a simple hug can make my heart beat faster than ever before.</p>
+        <p>The day of my 9th grade graduation I received flowers and pins from you. I’m happy that you were the person who hanged my bell on my suit. I hope you’ll be here when I graduate 12th grade. </p>
+        <p>The next memory I have is the day of my birthday, I’ve never really tried to celebrate it and I’d have never thought it was my special day. The moment I saw you with a cake, singing happy birthday to me made me the happiest person alive. After that day it felt like I made the right choice on my future wife. How can someone be this patient, this gentle and this caring? You’re the reason I strive for greatness. </p>
+        <p>My first ever date was with you. It was between our 1st month anniversary and your birthday. Now that I think about it I should’ve done something memorable. I gave you gifts, and we just talked for hours and hours. But that moment still lives with me. </p>
+        <p>We spent Christmas, Valentines, Pepero day, National woman’s day together and I wish prom could’ve happened. That would be another great memory we would’ve had.</p>
+         <p>You know, when I really stop and think about it, you're the first person who has ever made me feel what love truly is. Every first moment that mattered in my life, I experienced with you by my side, and honestly, I can't imagine it having been any other way. Not once, not for a single second throughout this entire year, have I ever stopped feeling this way about you. This love hasn't flickered or faded even a little. I've never felt this deeply for anyone before you, and that still surprises me sometimes. But what gets me the most is that every single day, whether we're laughing together, sitting in silence, or just going through the ordinary moments of life, I find myself loving you even more than I did the day before. It's like no matter how much I think I love you, the next day proves me wrong by loving you even more.
+</p>
+          <p>Tselmuune, I could sit here and write forever, but honestly no words I put on this paper will ever really do justice to what you mean to me. I just know that before you, my life looked completely different. You came in and changed things in ways I didn't even see coming. You made me want to be better, not because I had to, but because you deserve the best version of me.</p>
+           <p>I don't have everything figured out, and I definitely don't know exactly what our future looks like. But I know one thing for sure — I want you in it. All of it. The stressful days, the stupid arguments, the big wins, the lazy afternoons, all of it. I want to go through life knowing you're by my side.</p>
+           <p>You're not just the person I love. You're the person who makes me feel like myself. My safe place. The one I think about first thing in the morning and last thing before I sleep.</p>
+           <p>So from the bottom of my heart, thank you. Thank you for not giving up on me. Thank you for your patience, your kindness, and your smile that I swear could fix any bad day I'm having. I promise I'm not going anywhere. I promise I'll keep trying, keep growing, and keep loving you more than you'd ever expect.
+</p>
+           <p>You deserve everything good in this world (especially me hhe). And I mean that.</p>
+           <p>Yours completely and forever.</p>
+           <p>I Love you sooo muchhh❤️</p>
+
+        
+        <p style="margin-top: 30px; font-family: 'Caveat', cursive; font-size: 26px; color: #ff4d6d;">
+            With all my love, <br>— Tsogtyyy
+        </p>
+    </div>
+
+    <script>
+        function openLetter() {
+            const env = document.getElementById('envelopeContainer');
+            const letCont = document.getElementById('letterContainer');
+            
+            env.style.display = 'none';
+            letCont.style.display = 'block';
+            
+            // Trigger smooth fade-in
+            setTimeout(() => {
+                letCont.style.opacity = '1';
+            }, 50);
+            
+            // Continuous sprinkle of sweet elements (hearts and sparkles)
+            setInterval(createFloatingElement, 250);
+        }
+
+        function createFloatingElement() {
+            const elements = ['❤️', '✨', '💖', '🌸', '💕'];
+            const randomType = elements[Math.floor(Math.random() * elements.length)];
+            
+            const item = document.createElement('div');
+            item.classList.add('floating-element');
+            item.innerHTML = randomType;
+            
+            item.style.left = Math.random() * 100 + 'vw';
+            item.style.animationDuration = (Math.random() * 2 + 3) + 's'; 
+            item.style.fontSize = (Math.random() * 15 + 15) + 'px';
+            
+            document.body.appendChild(item);
+            
+            setTimeout(() => {
+                item.remove();
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
